@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6b1220">
+<title>Eis este Coração</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111111;
+  --ink-soft:#3f3f3f;
+  --paper:#ffffff;
+  --parchment:#f1f1f1;
+  --wine:#b4182a;
+  --wine-dark:#111111;
+  --gold:#b4182a;
+  --gold-soft:#d6626f;
+  --rule:#dddddd;
+  --n1:#9e7828; --n2:#6b1220; --n3:#8c3040; --n4:#24446a;
+  --n5:#2e5c44; --n6:#5a5a5a; --n7:#888; --nx:#6e6e6e;
+}
+
+*{ box-sizing: border-box; }
+
+html,body{
+  padding:0; margin:0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond', 'Noto Serif', Georgia, serif;
+  font-size: 14pt;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+  color: var(--wine-dark);
+  font-weight: 600;
+  line-height: 1.2;
+  break-after: avoid;
+}
+
+main.content{ padding: 2mm 0 4mm 0; }
+
+/* ---------- Capa ---------- */
+section.cover{
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 28mm 10mm 20mm 10mm;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 20%, #f4f4f4 0%, var(--paper) 70%);
+  break-after: page;
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+}
+section.cover::before{
+  content:"";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: var(--gold-soft);
+  margin: 0 auto 2.4em auto;
+}
+section.cover h1{
+  font-size: 3.4rem; font-weight: 700;
+  margin: 0 0 .5em 0; max-width: 18em;
+  color: var(--wine-dark);
+}
+section.cover h2{
+  font-family: 'EB Garamond', serif; font-weight: 400; font-style: italic;
+  font-size: 1.4rem; color: var(--ink-soft);
+  margin: 0 0 1.2em 0; max-width: 28em;
+}
+section.cover h3{
+  font-family: 'EB Garamond', serif; font-weight: 400; font-size: .9rem;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--gold);
+  margin: 0 0 2.2em 0;
+}
+section.cover blockquote{
+  border:none; background:none;
+  max-width: 26em; margin: 0 auto 2em auto; padding: 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: .8em 1.5em;
+}
+section.cover blockquote p{
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1.18rem; color: var(--ink-soft); line-height: 1.55;
+  margin:0;
+}
+.cover-ornament{ margin-top: 2em; font-size: 1.4rem; color: var(--gold); opacity: .75; }
+
+/* ---------- Sumario ---------- */
+nav.toc-page{
+  break-after: page;
+  padding: 10mm 4mm 8mm 4mm;
+}
+nav.toc-page h2{
+  font-size: 2.2rem; text-align:center;
+  margin-bottom: .4em; color: var(--wine-dark);
+}
+nav.toc-page h2::after{
+  content:""; display:block; width:56px; height:2px;
+  background: var(--gold-soft); margin: .5em auto 1.6em auto;
+}
+div.toc ul{ list-style:none; margin:0; padding:0; }
+div.toc > ul > li{
+  margin: 0 0 0 0; padding: .75em 0;
+  border-bottom: 1px solid var(--rule);
+}
+div.toc > ul > li:first-child{ border-top: 1px solid var(--rule); }
+div.toc a{
+  text-decoration:none; color: var(--ink);
+  font-size: 1.08rem; font-family: 'Cormorant Garamond', serif;
+  display:block; font-weight: 500;
+}
+div.toc a:hover{ color: var(--wine); }
+
+/* ---------- Headings ---------- */
+main.content h2{
+  font-size: 2.15rem; margin: 0 0 .1em 0;
+  padding-top: 2mm; break-before: page; break-after: avoid;
+}
+main.content h2::after{
+  content:""; display:block; width: 50px; height: 3px;
+  background: var(--gold-soft); margin: .4em 0 .9em 0;
+}
+main.content h2.h2-apresentacao{ break-before: avoid; }
+main.content h2.h2-no-break{ break-before: auto; }
+main.content h3{
+  font-size: 1.5rem; color: var(--wine);
+  margin: 1.5em 0 .5em 0; break-after: avoid;
+}
+main.content h4{ font-size: 1.15rem; color: var(--ink-soft); margin: 1.2em 0 .4em 0; }
+main.content h5,main.content h6{
+  font-family: 'EB Garamond', serif; font-style: italic; font-weight: 600;
+  font-size: 1.02rem; color: var(--ink-soft); margin: 1em 0 .35em 0; break-after: avoid;
+}
+
+h3.review-heading{
+  margin-top: 2em; font-style: italic; color: var(--gold);
+  font-size: 1.1rem; text-transform: uppercase; letter-spacing: .04em;
+}
+h3.review-heading + ol{
+  background: var(--parchment); border-left: 3px solid var(--gold-soft);
+  border-radius: 3px; padding: 1em 1.5em 1em 2.5em;
+}
+h3.review-heading + ol li{ margin-bottom: .5em; }
+h3.review-heading + ol li:last-child{ margin-bottom: 0; }
+
+/* ---------- Paragrafos / listas ---------- */
+main.content p{ margin: 0 0 .85em 0; text-align: justify; orphans: 4; widows: 4; }
+main.content ul, main.content ol{ margin: 0 0 .9em 0; padding-left: 1.6em; }
+main.content li{ margin-bottom: .3em; }
+main.content strong{ color: var(--wine-dark); font-weight: 700; }
+main.content em{ color: var(--ink-soft); }
+
+/* ---------- Blocos de codigo / prompt ---------- */
+main.content pre{
+  background: var(--parchment); border: 1px solid var(--rule);
+  border-left: 4px solid var(--gold); border-radius: 2px;
+  padding: .9em 1.1em; margin: 0 0 1.1em 0;
+  white-space: pre-wrap; word-wrap: break-word;
+  font-family: 'Courier New', monospace; font-size: .82rem; line-height: 1.5;
+  color: var(--ink-soft);
+  /* sem break-inside:avoid de proposito: um prompt longo (>1 pagina) forcado a
+     nao quebrar vira o mesmo bug de "tabela maior que a pagina" ja documentado
+     em notas-tecnicas-pdf.md (#3) -- heading isolado com espaco vazio embaixo.
+     Deixamos quebrar livremente entre paginas, como o texto normal. */
+}
+main.content code{
+  font-family: 'Courier New', monospace; font-size: .92em;
+  background: var(--parchment); padding: .05em .3em; border-radius: 2px;
+}
+main.content pre code{ background: none; padding: 0; }
+
+/* ---------- Citacoes ---------- */
+main.content blockquote{
+  margin: 1.2em 2em 1.3em 2em; padding: .85em 1.4em;
+  background: var(--parchment); border-left: 4px solid var(--wine);
+  border-radius: 2px; break-inside: avoid;
+}
+main.content blockquote p{ font-style: italic; color: var(--ink-soft); margin-bottom: .35em; }
+main.content blockquote p:last-child{ margin-bottom: 0; }
+
+/* ---------- Notas ---------- */
+p.nota{
+  background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--gold);
+  border-radius: 2px; padding: .7em 1.1em; font-size: .96rem; color: var(--ink-soft);
+  break-inside: avoid;
+}
+
+/* ---------- Tabelas ---------- */
+main.content table{
+  width: 100%; border-collapse: collapse;
+  margin: 1em 0 1.4em 0; font-size: 1rem; break-inside: avoid;
+}
+main.content th, main.content td{
+  border: 1px solid var(--rule); padding: .55em .85em;
+  text-align: left; vertical-align: top;
+}
+main.content thead th{
+  background: var(--wine-dark); color: #ffffff;
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.05rem; letter-spacing: .025em;
+}
+main.content tbody tr:nth-child(even){ background: var(--parchment); }
+
+h2.timeline-heading + table{ break-inside: auto; }
+h2.timeline-heading + table tr{ break-inside: avoid; }
+/* Tabelas longas (marcadas automaticamente em Python, passo 4b): quebram
+   entre linhas, repetindo o cabecalho (bug 3 das notas tecnicas). */
+main.content table.long-table{ break-inside: auto; }
+main.content table.long-table tr{ break-inside: avoid; }
+main.content table.long-table thead{ display: table-header-group; }
+
+/* ---------- Badges de nivel de autoridade ---------- */
+.nivel{
+  display:inline; font-family: 'EB Garamond', serif; font-style: normal; font-weight: 600;
+  font-size: .85em; padding: .05em .42em; border-radius: 6px;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.nivel em{ color: inherit; font-style: italic; }
+.nivel-1{ color: var(--n1); border: 1px solid var(--n1); background: color-mix(in srgb, var(--n1) 12%, var(--paper)); }
+.nivel-2{ color: var(--n2); border: 1px solid var(--n2); background: color-mix(in srgb, var(--n2) 10%, var(--paper)); }
+.nivel-3{ color: var(--n3); border: 1px solid var(--n3); background: color-mix(in srgb, var(--n3) 11%, var(--paper)); }
+.nivel-4{ color: var(--n4); border: 1px solid var(--n4); background: color-mix(in srgb, var(--n4) 11%, var(--paper)); }
+.nivel-5{ color: var(--n5); border: 1px solid var(--n5); background: color-mix(in srgb, var(--n5) 11%, var(--paper)); }
+.nivel-6{ color: var(--n6); border: 1px solid var(--n6); background: color-mix(in srgb, var(--n6) 11%, var(--paper)); }
+.nivel-7{ color: var(--n7); border: 1px solid var(--n7); background: color-mix(in srgb, var(--n7) 11%, var(--paper)); }
+.nivel-x{ color: var(--nx); border: 1px solid var(--nx); background: color-mix(in srgb, var(--nx) 11%, var(--paper)); }
+
+/* ---------- Glossario / bibliografias ---------- */
+h2.glossary-heading + ul{ list-style:none; padding:0; margin:0; }
+h2.glossary-heading + ul li{ padding: .5em 0; border-bottom: 1px dotted var(--rule); }
+h2.glossary-heading + ul li strong{ color: var(--wine); }
+
+main.content a{ color: var(--wine); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
+h2.biblio1-heading + p + ol a::before{ content: "\25B6"; font-size: .65em; color: var(--gold); margin-right: .4em; }
+
+main.content hr{ display:none; }
+
+main.content blockquote p{ white-space: pre-line; }
+main.content blockquote, main.content blockquote p{ break-inside: auto !important; page-break-inside: auto !important; }
+
+@media screen {
+  html{ font-size: 18px; scroll-behavior: smooth; }
+  html,body{ font-size: 18px; line-height: 1.7; }
+  body{ max-width: 46rem; margin: 0 auto; padding: 0 1.4rem 4rem 1.4rem; }
+  section.cover{ min-height: 92vh; padding: 3rem 1rem; break-after: auto; }
+  section.cover h1{ font-size: 2.8rem; }
+  nav.toc-page{ padding: 2rem 0 1rem 0; border-bottom: 1px solid var(--rule); }
+  main.content h2{ margin-top: 3.2rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+  main.content table{ display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  main.content img{ max-width: 100%; height: auto; }
+  a.topo{ position: fixed; right: 14px; bottom: 14px; width: 46px; height: 46px; border-radius: 50%;
+    background: var(--wine); color: #fff !important; text-decoration: none; display: flex;
+    align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 2px 8px rgba(0,0,0,.25); opacity: .88; z-index: 10; }
+  a.topo:hover{ opacity: 1; }
+}
+@media screen and (max-width: 600px) {
+  html,body{ font-size: 17px; line-height: 1.65; }
+  body{ padding: 0 1rem 4.5rem 1rem; }
+  section.cover{ min-height: 85vh; padding: 2rem .5rem; }
+  section.cover h1{ font-size: 2.2rem; }
+  section.cover h2{ font-size: 1.15rem; }
+  main.content h2{ font-size: 1.7rem; }
+  main.content h3{ font-size: 1.3rem; }
+  main.content blockquote{ margin-left: 0; margin-right: 0; padding-left: .8em; }
+  main.content table{ font-size: .88rem; }
+  main.content p, main.content li{ text-align: left; hyphens: auto; }
+}
+@media print { a.topo{ display: none; } }
+</style>
+</head>
+<body>
+<section class="cover"><h1 id="eis-este-coracao">Eis este Coração</h1>
+<h2 id="o-sagrado-coracao-de-jesus-as-primeiras-sextas-feiras-e-a-hora-santa">O Sagrado Coração de Jesus, as primeiras sextas-feiras e a Hora Santa</h2>
+<h3 id="edicao-2026">Edição 2026</h3>
+<blockquote>
+<p><em>"Eis este Coração que tanto amou os homens."</em></p>
+</blockquote>
+<div class="cover-ornament">&#10013;</div></section><nav id="sumario" class="toc-page"><h2>Sumário</h2><div class="toc"><ul>
+
+<li><a href="#introducao">Introdução</a></li>
+<li><a href="#capitulo-1-o-que-quer-dizer-coracao">Capítulo 1 — O que quer dizer "coração"</a></li>
+<li><a href="#capitulo-2-a-fonte-aberta">Capítulo 2 — A fonte aberta</a></li>
+<li><a href="#capitulo-3-muito-antes-de-paray">Capítulo 3 — Muito antes de Paray</a></li>
+<li><a href="#capitulo-4-uma-visitandina-em-paray-le-monial">Capítulo 4 — Uma visitandina em Paray-le-Monial</a></li>
+<li><a href="#capitulo-5-a-grande-promessa">Capítulo 5 — A Grande Promessa</a></li>
+<li><a href="#capitulo-6-as-doze-promessas">Capítulo 6 — As doze promessas</a></li>
+<li><a href="#capitulo-7-consolar-o-coracao-de-cristo">Capítulo 7 — Consolar o Coração de Cristo</a></li>
+<li><a href="#capitulo-8-vigiar-uma-hora">Capítulo 8 — Vigiar uma hora</a></li>
+<li><a href="#capitulo-9-o-que-os-papas-ensinaram">Capítulo 9 — O que os papas ensinaram</a></li>
+<li><a href="#capitulo-10-perguntas-que-todos-fazem">Capítulo 10 — Perguntas que todos fazem</a></li>
+<li><a href="#capitulo-11-os-santos-depois-de-paray-e-maria">Capítulo 11 — Os santos depois de Paray, e Maria</a></li>
+<li><a href="#capitulo-12-o-ano-do-coracao">Capítulo 12 — O ano do Coração</a></li>
+<li><a href="#capitulo-13-na-pratica">Capítulo 13 — Na prática</a></li>
+<li><a href="#apendice-oracoes">Apêndice — Orações</a></li>
+</ul></div></nav><main class="content">
+<h2 id="introducao">Introdução</h2>
+<p>Há igrejas em que, na primeira sexta-feira de cada mês, algo diferente acontece. Pessoas que durante a semana mal se cruzam chegam mais cedo para a confissão, ficam depois da Missa, ajoelham-se diante do Santíssimo exposto e rezam juntas uma ladainha que os avós já rezavam. Alguns contam nos dedos: "esta é a minha quinta sexta-feira; faltam quatro". Outros já perderam a conta, porque fizeram as nove há muitos anos e simplesmente não pararam.</p>
+<p>Este livro foi escrito para essas pessoas e para os que as conduzem: os grupos de oração, os ministros que preparam a Hora Santa, as famílias que têm em casa a imagem do Sagrado Coração e talvez não saibam bem o que ela quer dizer. Escrevemos também para quem olha de longe para esta devoção e se pergunta se ela não é coisa de outro tempo, sentimental demais, ou uma espécie de contrato com o céu.</p>
+<p>Queremos responder a essas perguntas com calma. A devoção ao Coração de Jesus não começou com as visões de uma religiosa francesa no século XVII. Ela nasce do Evangelho, do lado aberto na cruz, e atravessa a história da Igreja muito antes de Paray-le-Monial. As promessas feitas a Santa Margarida Maria são reais, consoladoras e aprovadas pela Igreja. Justamente por isso merecem ser bem compreendidas: são motivo de esperança firme, e não um bilhete de entrada. E o coração de tudo isso, se nos permitem o jogo de palavras, não está nas práticas, mas no amor que elas querem despertar.</p>
+<p>O caminho que propomos é simples. Começamos pelo que quer dizer "coração" e pela fonte bíblica da devoção. Passamos pelos séculos que prepararam Paray, pela vida de Santa Margarida Maria e pelas suas revelações. Depois nos detemos no que mais interessa a quem pratica: a Grande Promessa, as doze promessas, a reparação e a Hora Santa. Seguem-se o ensinamento dos papas, as objeções mais comuns, os santos que vieram depois e o lugar de Maria. O livro termina no calendário e na prática: como fazer as nove primeiras sextas-feiras, como conduzir uma Hora Santa, como falar desta devoção sem exageros. No fim, as orações.</p>
+<p>Pedimos ao leitor uma só coisa: que leia estas páginas como quem se aproxima de uma pessoa, e não de um assunto. Porque é disso que se trata.</p>
+<hr />
+<h2 id="capitulo-1-o-que-quer-dizer-coracao">Capítulo 1 — O que quer dizer "coração"</h2>
+<h3 id="uma-palavra-que-nao-e-so-do-corpo">Uma palavra que não é só do corpo</h3>
+<p>Quando Jesus quis dizer quem era, usou esta palavra: "Aprendei de mim, porque sou manso e humilde de coração" (Mt 11,29). É o versículo que fecha a Ladainha do Sagrado Coração, rezada há mais de um século em todo o mundo: "Jesus, manso e humilde de coração, fazei o nosso coração semelhante ao vosso".</p>
+<p>Para entender a devoção, precisamos primeiro entender a palavra. Na Bíblia, o coração não é só o órgão que bate no peito. É o centro da pessoa, o lugar onde ela decide, ama e crê. Já os antigos gregos, de Homero a Platão, falavam do coração como o ponto em que o pensamento e o sentimento se encontram e onde se tomam as grandes decisões. A Escritura leva essa intuição mais longe. O coração é o núcleo escondido por trás das aparências, que só a Palavra de Deus é capaz de discernir (Hb 4,12). É também o lugar onde algo arde, mesmo no desânimo, como aconteceu aos discípulos de Emaús: "Não nos ardia o coração, quando Ele nos falava pelo caminho?" (Lc 24,32).</p>
+<p>O Papa Francisco, na encíclica que dedicou ao Coração de Cristo, <em>Dilexit nos</em>, começa exatamente por essa pergunta: "O que entendemos quando dizemos 'coração'?" E responde que esse centro mais íntimo de cada ser humano "não é o núcleo da alma, mas da pessoa inteira na sua identidade única, que é alma e corpo". Chega a dizer: "poder-se-ia dizer que eu sou o meu coração".</p>
+<p>Não é uma ideia piedosa sem consequência. Num mundo apressado, que consome tudo e não guarda nada, "é necessário voltar a falar do coração". O Concílio Vaticano II já ensinava que "os desequilíbrios de que sofre o mundo atual estão ligados com aquele desequilíbrio fundamental que se radica no coração do homem". Mas há uma advertência: "o nosso coração não é autossuficiente; é frágil e ferido". Não basta voltar ao nosso coração. Precisamos de outro, maior, que nos cure. Por isso recorremos ao Coração de Cristo, "fornalha ardente de amor divino e humano".</p>
+<h3 id="um-coracao-humano-o-coracao-de-deus">Um coração humano, o Coração de Deus</h3>
+<p>O Catecismo da Igreja Católica resume numa frase o fundamento de tudo o que este livro vai dizer: Jesus "amou-nos a todos com um coração humano". Por isso o Sagrado Coração, "trespassado pelos nossos pecados e para nossa salvação", é o "sinal e símbolo por excelência" do amor com que o Redentor ama o Pai e todos os homens. E a Igreja, quando reza, "venera e honra o Coração de Jesus", adorando "o Verbo encarnado e o seu Coração que, por amor dos homens, Se deixou trespassar pelos nossos pecados".</p>
+<p>Aqui está o ponto decisivo. O Coração de Jesus pode ser chamado, com toda a verdade, Coração de Deus. Não porque Deus tenha um órgão, mas porque em Jesus a carne humana está unida à segunda Pessoa da Santíssima Trindade. É a verdade que a Igreja proclamou nos Concílios de Éfeso e de Constantinopla II. Pio XII tirou dela a conclusão: o Coração de Cristo, unido à Pessoa do Verbo, recebe o mesmo culto de adoração que se presta à Pessoa divina.</p>
+<p>O mesmo papa nos ensinou a distinguir, nesse Coração, um <strong>tríplice amor</strong>:</p>
+<ul>
+<li>o <strong>amor divino</strong>, que o Filho partilha desde sempre com o Pai e o Espírito Santo;</li>
+<li>a <strong>caridade</strong> derramada na sua vontade humana;</li>
+<li>e o seu <strong>amor sensível</strong>, plenamente humano, feito de afeto, de ternura e de compaixão.</li>
+</ul>
+<p>Quando olhamos para o Coração de Jesus, olhamos para os três ao mesmo tempo. É Deus quem nos ama, e nos ama como um homem ama.</p>
+<h3 id="nao-se-adora-um-orgao-adora-se-a-pessoa">Não se adora um órgão, adora-se a Pessoa</h3>
+<p>Este é o ponto que mais protege a devoção contra os mal-entendidos, e convém dizê-lo com clareza desde o início. Nas palavras do Papa Francisco: "A devoção ao Coração de Cristo não é o culto a um órgão separado da Pessoa de Jesus. O que contemplamos e adoramos é a Jesus Cristo por inteiro". E também: "O objeto de adoração é o Coração vivo de Cristo – e nunca uma imagem".</p>
+<p>Por que, então, o coração de carne? Porque, mais do que qualquer outro membro do corpo, ele é o "símbolo da sua imensa caridade". Em todas as culturas o coração se tornou sinal da intimidade e do afeto. É por isso que dizemos: "Digo-o do fundo do coração".</p>
+<h3 id="a-imagem-que-temos-em-casa">A imagem que temos em casa</h3>
+<p>Muitos de nós crescemos com uma imagem do Sagrado Coração na parede: Jesus mostrando o coração em chamas no peito. Algumas dessas imagens são belas. Outras, confessemos, nem tanto. O Papa Francisco tem uma palavra libertadora sobre isso. Algumas imagens "podem parecer-nos pouco atrativas", mas isso não importa, "pois a imagem não é mais do que uma figura motivadora", e "não devemos fixar-nos no dedo que aponta para a lua".</p>
+<p>Ao mesmo tempo, ele deixa duas indicações práticas. A primeira: é melhor que o coração com chamas "faça parte de uma imagem de Jesus Cristo", com um olhar que chama ao encontro e mãos que sustentam. O coração sozinho, solto no ar, diz menos do que o Senhor inteiro que nos mostra o seu coração. A segunda: não devemos desprezar a imagem em nome de algo mais "elevado". "Uma forma de devoção mais abstrata ou estilizada não será necessariamente mais fiel ao Evangelho", porque o coração de carne fala de um Deus que quis entrar na nossa história, com um corpo como o nosso.</p>
+<p>A imagem, portanto, de maneira nenhuma é objeto de adoração. Mas ela "convoca, aponta, conduz" ao encontro com o Cristo vivo. É para isso que ela está na parede da sala.</p>
+<h3 id="um-coracao-que-leva-ao-pai">Um Coração que leva ao Pai</h3>
+<p>Há um risco silencioso em toda devoção: parar no meio do caminho. A devoção ao Sagrado Coração é, como diz Francisco, "marcadamente cristológica": está centrada em Cristo. Mas Jesus não quer que paremos nele como quem chega ao fim da estrada. Ele é o caminho, e quer "conduzir-nos ao Pai" (Jo 14,6).</p>
+<p>São João Paulo II dizia que o Coração de Cristo é "a obra-prima do Espírito Santo", e que "só o Espírito Santo pode abrir diante de nós esta plenitude do 'homem interior'". E acrescentava: "O Coração do Salvador convida a subir de novo ao amor do Pai, que é a fonte de todo o amor autêntico".</p>
+<p>A própria Ladainha nos ensina a rezar assim. Depois de trinta e três invocações ao Coração de Jesus, ela não termina diante dele, mas se volta para o Pai: "Deus eterno e todo-poderoso, olhai para o Coração do vosso Filho muito amado…". É a forma de toda a oração da Igreja: ao Pai, por Cristo, no Espírito Santo. Quem reza ao Sagrado Coração entra, sem perceber, no próprio movimento da Trindade.</p>
+<hr />
+<p><em>Para levar consigo.</em> Na próxima vez que rezar diante da imagem do Sagrado Coração, não se apresse em pedir. Fique um instante olhando, e pergunte-se com sinceridade: o que há hoje no meu coração que precisa ser tocado pelo dele? Termine com o versículo da Ladainha, devagar: "Jesus, manso e humilde de coração, fazei o nosso coração semelhante ao vosso".</p>
+<hr />
+<h2 id="capitulo-2-a-fonte-aberta">Capítulo 2 — A fonte aberta</h2>
+<h3 id="uma-honestidade-necessaria">Uma honestidade necessária</h3>
+<p>Comecemos por uma franqueza que a própria Igreja nos ensinou. Pio XII, na grande encíclica que dedicou ao Sagrado Coração, <em>Haurietis aquas</em>, reconhece abertamente: "nos livros sagrados nunca se faz menção certa de um culto de especial veneração e amor tributado ao coração físico do Verbo encarnado". Não há, na Bíblia, um versículo que mande honrar o coração de Jesus como hoje o honramos.</p>
+<p>Mas o mesmo papa acrescenta logo que isso não deve fazer ninguém duvidar. A caridade divina, que é a "razão principal deste culto", é exaltada pelo Antigo e pelo Novo Testamento com "imagens sumamente comovedoras", que podem ser vistas como "presságio" do símbolo do Coração. A devoção não depende de um versículo isolado. Ela recolhe todo o testemunho bíblico do amor de Deus, e é esse testemunho que vamos percorrer.</p>
+<h3 id="o-coracao-de-deus-no-antigo-testamento">O coração de Deus no Antigo Testamento</h3>
+<p>Desde o início, a Aliança não se apoiava só no temor, mas no amor: "Escuta, Israel… Amarás o Senhor teu Deus" (Dt 6,4-5). Moisés e os profetas descrevem a relação entre Deus e o seu povo com imagens de pai e filho, de esposo e esposa, muito mais do que de senhor e servo.</p>
+<p>Os profetas encontram palavras de uma ternura que ainda hoje surpreende. Isaías compara Deus a uma mãe: "Acaso pode uma mulher esquecer-se do seu bebé, não ter carinho pelo fruto das suas entranhas? Ainda que ela se esquecesse dele, Eu nunca te esqueceria. Eis que Eu gravei a tua imagem na palma das minhas mãos" (Is 49,15-16). Jeremias ouve: "Amei-te com um amor eterno" (Jr 31,3). Isaías, de novo: "o meu amor por ti nunca mais será abalado" (Is 54,10). E Sofonias tem a ousadia de dizer que Deus "exulta de alegria por tua causa" (Sf 3,17).</p>
+<p>Mas é Oseias quem chega mais perto do que hoje chamamos Sagrado Coração. O profeta deixa Deus falar do próprio coração: "Segurava-os com laços humanos, com laços de amor" (Os 11,4). E, diante da infidelidade do povo: "O meu coração dá voltas dentro de mim, comovem-se as minhas entranhas" (Os 11,8). A misericórdia vence (cf. Os 11,9). Não é por acaso que a Igreja lê esse texto na Missa da solenidade do Sagrado Coração.</p>
+<p>A tudo isso se junta uma promessa: a de um coração novo. "Derramarei sobre vós uma água pura… introduzirei em vós um espírito novo" (Ez 36,25-26). Guardemos a palavra <strong>água</strong>. Ela vai nos levar até a cruz.</p>
+<h3 id="da-fonte-do-templo-ao-lado-de-cristo">Da fonte do templo ao lado de Cristo</h3>
+<p>Há um fio que atravessa as Escrituras, e o Papa Francisco o reconstruiu com cuidado na encíclica <em>Dilexit nos</em>. Sigamo-lo passo a passo.</p>
+<ol>
+<li><strong>A água prometida.</strong> Isaías anuncia: "Tirareis água com alegria das fontes da salvação" (Is 12,3). Ezequiel vê uma torrente que sai do templo e dá vida a tudo o que toca (Ez 47).</li>
+<li><strong>A festa das Tendas.</strong> Nessa festa, a água era oferecida solenemente no templo, sobretudo no último dia.</li>
+<li><strong>O Trespassado e a fonte.</strong> Zacarias une duas imagens misteriosas: "Eles contemplarão aquele a quem trespassaram… Naquele dia, haverá uma fonte aberta… para a purificação do pecado" (Zc 12,10; 13,1).</li>
+<li><strong>Jesus na festa.</strong> "No último dia, o mais solene da festa" das Tendas, Jesus clama: "Se alguém tem sede, venha a mim […] hão de correr do seu coração rios de água viva" (Jo 7,37-38). O evangelista explica que isso esperava a "hora" da glorificação (Jo 7,39).</li>
+<li><strong>O cumprimento na cruz.</strong> E a hora chega. "Um dos soldados traspassou-lhe o peito com uma lança e logo brotou sangue e água" (Jo 19,34). João cita Zacarias: "Hão-de olhar para aquele que trespassaram" (Jo 19,37). Francisco conclui: "A fonte aberta é o lado ferido de Jesus Cristo".</li>
+<li><strong>O Apocalipse.</strong> No último livro da Bíblia, o Trespassado reaparece ("Todos os olhos o verão, até mesmo os que o trespassaram", Ap 1,7), e com ele a fonte: "O que tem sede que se aproxime" (Ap 22,17).</li>
+</ol>
+<p>Daí a síntese que vale a pena guardar de memória: "No Coração trespassado de Cristo estão concentradas, escritas na carne, todas as expressões de amor das Escrituras".</p>
+<h3 id="do-lado-aberto-nasce-a-igreja">Do lado aberto nasce a Igreja</h3>
+<p>Os Padres da Igreja contemplaram longamente o sangue e a água que saíram do lado de Cristo e viram neles o nascimento dos sacramentos e da própria Igreja. O Catecismo recolhe essa leitura numa imagem belíssima: "assim como Eva foi formada do costado de Adão adormecido, assim a Igreja nasceu do coração trespassado de Cristo, morto na cruz". A Ladainha guarda tudo isso numa só invocação: "Coração de Jesus, transpassado pela lança".</p>
+<p>Há um detalhe que não podemos esquecer. Essa chaga não se fechou na Páscoa. Como diz o Papa Francisco, ela "permanece aberta no Ressuscitado". Por isso o fiel quer responder não só ao amor de Cristo, mas também à dor que Ele aceitou por amor. Aqui está, em germe, tudo o que diremos mais adiante sobre a reparação.</p>
+<p>Uma última figura ajuda a entrar neste mistério: o "discípulo amado que durante a ceia reclinara a cabeça sobre o peito de Jesus" (Jo 21,20). Pio XII o propõe como porta de entrada. Toda a devoção ao Sagrado Coração cabe no gesto de João: aproximar-se, inclinar a cabeça, escutar.</p>
+<hr />
+<p><em>Para levar consigo.</em> Leia devagar, numa noite desta semana, João 19,31-37. Depois leia Oseias 11. Pergunte-se: que "laços de amor" Deus já usou para me segurar quando eu quis me afastar?</p>
+<hr />
+<h2 id="capitulo-3-muito-antes-de-paray">Capítulo 3 — Muito antes de Paray</h2>
+<p>É comum ouvir que a devoção ao Sagrado Coração "começou" com as visões de Santa Margarida Maria, em 1673. Não é assim, e saber disso muda o modo como a vivemos. O amor ao Coração de Cristo já existia na Igreja havia séculos. Nas palavras de Pio XII, ele "brotou espontaneamente da fé viva, da piedade fervorosa de almas prediletas" diante das chagas do Redentor. Paray deu a essa devoção uma forma nova e práticas concretas, mas não a inventou.</p>
+<h3 id="os-padres-a-fonte-do-espirito">Os Padres: a fonte do Espírito</h3>
+<p>Os primeiros cristãos não falavam do "Sagrado Coração", mas falavam muito do lado aberto. Vários Padres, sobretudo da Ásia Menor, viram nele a origem da água do Espírito: a Palavra, a graça, os sacramentos. Nas <em>Atas dos mártires de Lião</em>, a força dos que morriam pela fé vem da "fonte celeste de água viva que brota das entranhas de Cristo". São Justino diz que os fiéis "saímos do ventre de Cristo". Santo Ambrósio exorta: "Bebe Cristo, porque é a rocha que jorra água; bebe Cristo, porque é a fonte da vida".</p>
+<p>A partir de Orígenes, vários Padres leram a promessa de Jesus sobre os "rios de água viva" (Jo 7,38) também como dita do fiel. Quem bebe de Cristo torna-se, por sua vez, fonte para os outros.</p>
+<p>Os Padres defenderam ainda uma verdade que hoje nos parece óbvia, mas que já foi relativizada: Jesus teve afetos verdadeiros. São Basílio ensina que "o Senhor possuía os afetos naturais". Santo Ambrósio diz: "Como tomou a alma, tomou também as paixões da alma". É sobre essa base que Pio XII falará, séculos depois, do "amor sensível" de Cristo.</p>
+<p>E Santo Agostinho abriu o caminho para a devoção como encontro pessoal. Quando João inclinou a cabeça sobre o peito de Jesus, diz ele, "aproximou-se do lugar secreto da sabedoria".</p>
+<h3 id="a-idade-media-do-lado-aberto-ao-coracao">A Idade Média: do lado aberto ao Coração</h3>
+<p>Nos séculos XI e XII, em ambiente monástico, aparecem os primeiros sinais claros de uma devoção ao Coração propriamente dito. Os monges passam do lado aberto ao que está por trás dele.</p>
+<p>São Bernardo escreve: "O segredo do seu coração é patente através das chagas do corpo, é patente o grande sacramento da piedade, são patentes as vísceras de misericórdia do nosso Deus". Guilherme de Saint-Thierry pergunta: "Aonde pois, Senhor, conduzis aqueles que abraçais e estreitais em vossos braços, senão para o vosso coração?"</p>
+<p>São Boaventura une as duas linhas da tradição. O lado aberto é fonte dos sacramentos e é também lugar de amizade: "Levanta-te, pois, tu que amas a Cristo, sê como a pomba que faz o seu ninho na borda do rochedo". E o santo tem o cuidado de evitar que o acesso à graça se torne "algo de mágico", advertência que valerá também para as primeiras sextas-feiras.</p>
+<p>Vêm depois as grandes místicas: Santa Lutgarda, Santa Matilde de Hackeborn, Santa Ângela de Foligno, Juliana de Norwich e, sobretudo, Santa Gertrudes de Helfta. Numa visão, Gertrudes descansou a cabeça junto à chaga do lado e ouviu as batidas do Coração divino. Concluiu que "a doçura destes batimentos foi reservada aos tempos modernos, para que, ao escutá-los, o mundo envelhecido e morno possa renovar-se no amor de Deus". Parece escrito para nós.</p>
+<p>Os cartuxos, como Ludolfo da Saxônia, e Santa Catarina de Sena continuam o fio. A Catarina o Senhor fala assim: "Fiz ver que meu amor por vós é mais profundo de quanto possa indicar a dor passageira".</p>
+<p>Pio XII, ao nomear os principais promotores desta devoção antes de Paray, cita São Boaventura, Santo Alberto Magno, Santa Gertrudes, Santa Catarina de Sena, o Beato Henrique Suso, São Pedro Canísio e São Francisco de Sales.</p>
+<p>Uma prudência, porém. O Papa Francisco adverte que as formas modernas da devoção "não podem ser extrapoladas para as formas medievais e muito menos para as formas bíblicas, nas quais podemos vislumbrar as sementes deste culto". As raízes são antigas; a forma que conhecemos, com imagens, ladainhas e primeiras sextas, é moderna. As duas coisas são verdadeiras.</p>
+<h3 id="as-portas-de-paray">Às portas de Paray</h3>
+<p>Dois santos franceses do século XVII prepararam imediatamente o terreno.</p>
+<p><strong>São Francisco de Sales</strong>, que fundou com Santa Joana de Chantal a Ordem da Visitação, à qual pertenceria Santa Margarida Maria, propôs o Coração de Cristo como resposta à "moral rigorista" e a uma religião de "mero cumprimento de obrigações". Escreveu: "habitaremos para sempre no lado trespassado do Salvador". E falava de "um coração no qual veremos escritos todos os nossos nomes", do céu onde cada um "vê o seu nome escrito em caracteres de amor". Guardemos essa imagem: ela vai reaparecer numa das doze promessas. Os acontecimentos de Paray, diz o Papa Francisco, tiveram lugar "sob a influência salutar da espiritualidade de São Francisco de Sales".</p>
+<p><strong>São João Eudes</strong> (1601–1680) foi o primeiro a dar a esta devoção um lugar na liturgia. Compôs o primeiro ofício litúrgico em honra do Sagrado Coração. Depois de uma missão em Rennes, obteve do bispo a aprovação da festa do "Coração Adorável de Nosso Senhor Jesus Cristo", celebrada no seminário daquela cidade em 31 de agosto de 1670. Foi "a primeira vez que esta festa foi oficialmente autorizada na Igreja". Outros bispos da Normandia a autorizaram entre 1670 e 1671, e Pio XII registra a primeira celebração da festa solene, com aprovação de vários bispos da França, em 20 de outubro de 1672. São João Eudes promoveu também o culto litúrgico aos dois Corações, o de Jesus e o de Maria.</p>
+<p>Notemos as datas. Quando Santa Margarida Maria teve a sua primeira grande visão, no fim de 1673, a festa do Coração de Jesus já tinha sido celebrada na França. As visões de Paray deram à devoção a forma de <strong>reparação</strong> e as práticas que conhecemos: as primeiras sextas, a Hora Santa, o pedido de uma festa para a Igreja inteira. O amor ao Coração de Cristo já estava lá.</p>
+<hr />
+<p><em>Para levar consigo.</em> Escolha uma das frases deste capítulo, a de Ambrósio ("Bebe Cristo…") ou a de Gertrudes, e leve-a para a próxima Hora Santa. Saber que rezamos com tantos santos que nos precederam é, em si, um consolo.</p>
+<hr />
+<h2 id="capitulo-4-uma-visitandina-em-paray-le-monial">Capítulo 4 — Uma visitandina em Paray-le-Monial</h2>
+<h3 id="uma-vida-curta-e-escondida">Uma vida curta e escondida</h3>
+<p>Margarida Alacoque nasceu em 22 de julho de 1647, em L'Hautecour, na diocese de Autun, na França, filha de Claude Alacoque e Philiberte Lamyn. Teve uma infância marcada pela doença: passou cerca de quatro anos presa ao leito. As biografias falam em paralisia ou em febre reumática. Curou-se depois de prometer à Virgem Maria consagrar-se à vida religiosa. Recebeu a Crisma em 1669, aos 22 anos.</p>
+<p>A vocação não foi um caminho reto. Conta a tradição que, depois de ir a um baile, ela teve uma visão de Cristo flagelado que a censurava por esquecê-lo. Essas memórias chegaram até nós pela sua <em>Autobiografia</em>, que ela escreveu por ordem do jesuíta Pe. Ignace Rolin, seu diretor espiritual desde 1685, que lhe mandou pôr por escrito tudo o que lhe acontecera na vida.</p>
+<p>Em 1671 entrou no mosteiro da Visitação de Paray-le-Monial, a ordem fundada em 1610 por São Francisco de Sales e Santa Joana de Chantal. Dois meses depois, na festa de São Luís, 25 de agosto de 1671, tomou o hábito e recebeu o nome pelo qual a conhecemos: <strong>Margarida Maria</strong>. Professou em 6 de novembro de 1672.</p>
+<p>Viveu ali, escondida, até a morte. Morreu numa terça-feira, 17 de outubro de 1690, aos 43 anos, enquanto recebia a unção dos enfermos e invocava o nome de Jesus. A tradição guarda como suas últimas palavras: "Não preciso de nada além de Deus e de me perder no Coração de Jesus". A Igreja celebra a sua memória em 16 de outubro.</p>
+<h3 id="as-tres-grandes-aparicoes">As três grandes aparições</h3>
+<p>As grandes revelações aconteceram entre o fim de dezembro de 1673 e junho de 1675. Podemos resumi-las em três momentos.</p>
+<p><strong>27 de dezembro de 1673, festa de São João Evangelista.</strong> Na festa do discípulo que reclinou a cabeça sobre o peito do Senhor, Jesus deixa Margarida Maria repousar sobre o seu Coração. Revela-lhe "as maravilhas do seu amor" e diz que deseja torná-las conhecidas de todos.</p>
+<p><strong>No ano seguinte, 1674.</strong> Vêm os pedidos práticos: a comunhão frequente, a <strong>comunhão na primeira sexta-feira do mês</strong> e a <strong>Hora Santa</strong> na noite de quinta para sexta-feira.</p>
+<p><strong>16 de junho de 1675, na oitava de Corpus Christi.</strong> É a "grande aparição". Jesus mostra o seu Coração e diz as palavras que dão título a este livro: "Eis este Coração que tanto amou os homens…". E pede uma <strong>festa do Sagrado Coração</strong> na sexta-feira depois da oitava de Corpus Christi. Poucos dias depois, em 21 de junho de 1675, Margarida Maria e São Cláudio de la Colombière foram os primeiros a celebrar essa festa, consagrando-se ao Sagrado Coração.</p>
+<p>Conta-se ainda, nas biografias da tradição da Visitação, que num 4 de outubro, festa de São Francisco de Assis, ela viu o santo em grande glória junto de Jesus e o recebeu como guia particular "nas penas e sofrimentos" que viriam.</p>
+<h3 id="oposicao-e-discernimento">Oposição e discernimento</h3>
+<p>Nada disso foi aceito de imediato, e é bom que tenha sido assim. Teólogos julgaram as visões uma ilusão. Na comunidade, as irmãs se dividiam. A Madre de Saumaise, superiora de 1672 a 1678, e a Madre Greyfié, que a sucedeu até 1684, conviveram com essa divisão.</p>
+<p>A situação mudou na festa da Ascensão de 1684, quando a Madre Marie-Christine Melin assumiu como superiora e fez a comunidade eleger Margarida Maria sua assistente. No fim daquele ano, ela foi eleita mestra de noviças. Em 20 de junho de 1685, as noviças celebraram pela primeira vez a festa do Sagrado Coração, diante de uma imagem desenhada pela própria mestra, e ainda houve críticas de outras irmãs. Um ano depois, em 21 de junho de 1686, a comunidade inteira adorou o Sagrado Coração diante de um pequeno altar no coro. A capela do Sagrado Coração do mosteiro foi inaugurada em 7 de setembro de 1688.</p>
+<p>O papel decisivo coube a <strong>São Cláudio de la Colombière</strong> (1641–1682), jesuíta. Ele chegou a Paray no início de 1675 como superior da residência jesuíta e tornou-se diretor espiritual das visitandinas. Reconheceu a autenticidade da experiência de Margarida Maria e a ajudou a discerni-la. No fim de setembro de 1676 partiu para a Inglaterra, como pregador da duquesa de York. Voltou doente a Paray e ali morreu em 15 de fevereiro de 1682. São João Paulo II o canonizou em 31 de maio de 1992.</p>
+<p>O Papa Francisco mostra como São Cláudio deu à experiência da santa uma leitura sóbria, à luz da espiritualidade de Santo Inácio. E observa algo muito útil para nós: certas expressões de Margarida Maria, "se mal entendidas, poderiam levar a confiar demasiado nos próprios sacrifícios e ofertas". São Cláudio corrigiu esse risco com a confiança total em Cristo. É uma lição que vamos reencontrar quando falarmos das promessas.</p>
+<p>A seriedade com que a Igreja tratou essas revelações, com exame, resistência e discernimento demorado, faz parte da história desta devoção. Não a enfraquece. Ao contrário, dá-lhe solidez.</p>
+<h3 id="da-festa-de-1765-a-canonizacao">Da festa de 1765 à canonização</h3>
+<p>A devoção espalhou-se, sobretudo por obra dos jesuítas, e foi motivo de controvérsia. Só cerca de setenta e cinco anos depois da morte da santa veio o primeiro reconhecimento oficial. Por decreto da Congregação dos Ritos de 25 de janeiro de 1765, aprovado por Clemente XIII em 6 de fevereiro, a festa litúrgica foi concedida aos bispos da Polônia e à arquiconfraria romana do Sagrado Coração. Ainda não era para a Igreja inteira.</p>
+<p>Pio XII chama a atenção para um detalhe precioso: a Santa Sé aprovou a festa <strong>antes</strong> de aprovar os escritos de Santa Margarida Maria, e o fez "independentemente de toda revelação privada", atendendo só aos desejos dos fiéis. Para ele, essa é a "prova evidente" de que este culto nasce das próprias fontes da fé, e não das visões.</p>
+<p>A glorificação da santa seguiu o seu curso. Leão XII mandou abrir a causa em 30 de março de 1824. Pio IX aprovou três milagres em 24 de abril de 1864 e a beatificou em 18 de setembro do mesmo ano. Quando abriram o seu túmulo, em 1830, constatou-se que o cérebro estava preservado, cento e quarenta anos depois da morte. Bento XV a canonizou em 13 de maio de 1920, festa da Ascensão. A bula de canonização conta a sua vida com as datas por extenso, e é nela que a Igreja, como veremos, cita a Grande Promessa.</p>
+<hr />
+<p><em>Para levar consigo.</em> Margarida Maria foi desacreditada pelas próprias irmãs durante anos e não se rebelou. Esperou. Há em sua vida alguma coisa boa que você quer ver reconhecida e que talvez precise, simplesmente, esperar em paz?</p>
+<hr />
+<h2 id="capitulo-5-a-grande-promessa">Capítulo 5 — A Grande Promessa</h2>
+<h3 id="o-texto">O texto</h3>
+<p>De todas as palavras ligadas a Paray, nenhuma é tão conhecida quanto esta. Na forma mais difundida em português, ela diz:</p>
+<blockquote>
+<p>"Eu te prometo, no excesso da misericórdia do meu Coração, que o meu amor todo-poderoso concederá a todos aqueles que comungarem nas primeiras sextas-feiras de nove meses seguidos a graça da penitência final: não morrerão em minha desgraça nem sem receber os sacramentos, e o meu divino Coração será o seu refúgio seguro nesse último momento."</p>
+</blockquote>
+<p>Margarida Maria a relatou numa carta à Madre de Saumaise, a sua antiga superiora, em maio de 1688. No original francês, ela começa assim: <em>"Je te promets, dans l'excessive miséricorde de mon Cœur, que son amour tout-puissant accordera à tous ceux qui communieront neuf premiers vendredis du mois tout de suite, la grâce finale de la pénitence…"</em></p>
+<p>Repare-se numa palavra: <strong>penitência</strong>. Muitas vezes se ouve falar em "graça da perseverança final". Não é o que diz o texto. A santa fala da graça de <strong>se arrepender</strong> no fim, e não de uma garantia de nunca mais pecar. A diferença é grande, e voltaremos a ela.</p>
+<h3 id="a-igreja-a-fez-sua">A Igreja a fez sua</h3>
+<p>Esta promessa não ficou só nas cartas de uma religiosa. Em 13 de maio de 1920, ao canonizar Santa Margarida Maria, o Papa Bento XV citou a Grande Promessa na bula de canonização, em latim: <em>"Tibi polliceor, in profusa mei Cordis misericordia, si qui per novem continentes menses, singulis sextis feriis quoquo mense primis occurrentibus, sacratissimam mensam adeant, omnipotentem Cordis mei amorem poenitentiae finalis beneficium eis concessurum…"</em> O latim confirma: <em>poenitentiae finalis</em>, penitência final.</p>
+<p>Isso tem peso. Uma citação numa bula de canonização é uma aprovação do texto como digno de fé piedosa. Mas não é uma definição dogmática. A promessa continua a ser conteúdo de uma revelação privada, e o Catecismo ensina que as revelações privadas, mesmo as reconhecidas pela Igreja, não pertencem ao depósito da fé: ajudam a viver mais plenamente a Revelação de Cristo, sem completá-la. O Papa Francisco aplicou esse princípio a esta devoção: as visões dos santos que a propagaram "não são algo em que os fiéis sejam obrigados a acreditar como se fosse a Palavra de Deus". Confiamos na promessa porque a Igreja a julgou digna de confiança; não a pomos ao lado do Credo.</p>
+<h3 id="o-que-se-pede-de-fato">O que se pede, de fato</h3>
+<p>Em torno das nove primeiras sextas-feiras cresceu uma série de costumes, alguns excelentes, outros confusos. Separemos com cuidado o que é condição do que é recomendação.</p>
+<p>São <strong>quatro as condições</strong>:</p>
+<ol>
+<li><strong>Comungar</strong> na primeira sexta-feira do mês. É o núcleo do texto. A promessa fala de comunhão, e não só de assistir à Missa. A Missa é o lugar normal da comunhão, mas o que se pede é comungar.</li>
+<li><strong>Nove meses seguidos.</strong> O texto é expresso. Se faltar um mês, recomeça-se.</li>
+<li><strong>Em estado de graça</strong>, como em qualquer comunhão. Quem tem consciência de pecado grave precisa confessar-se antes de comungar.</li>
+<li><strong>Em honra do Sagrado Coração e em reparação.</strong> É a intenção que dá sentido a tudo. E basta fazê-la uma vez, de modo claro: a intenção feita e não revogada continua valendo, mesmo que a pessoa a esqueça no momento de comungar.</li>
+</ol>
+<p>E a <strong>confissão</strong>? Muitas vezes se diz que é preciso confessar-se "dentro de oito dias" ou "uma semana antes ou depois". Esse prazo pertence a outra devoção, a dos primeiros sábados, de que falaremos mais adiante. Na Grande Promessa não há prazo de confissão. A confissão é necessária quando há pecado grave e é muito recomendada em todo caso, mas não é exigida de quem já está em estado de graça.</p>
+<p>Uma observação prática: quem começa em junho faz a nona primeira sexta-feira em fevereiro do ano seguinte. No capítulo final, daremos um calendário completo.</p>
+<h3 id="o-que-a-promessa-da-e-o-que-nao-da">O que a promessa dá, e o que não dá</h3>
+<p>Chegamos ao ponto mais delicado, e precisamos tratá-lo com a mesma seriedade com que tratamos o texto.</p>
+<p>Às vezes se fala da Grande Promessa como de um "bilhete para o céu", uma garantia, uma fórmula. Às vezes se diz até que, diferentemente de outras promessas, esta não daria "só as graças", mas o próprio céu. É preciso dizer com clareza: <strong>não é assim</strong>.</p>
+<p>O Concílio de Trento ensinou que ninguém pode ter "certeza absoluta e infalível" de que receberá o dom da perseverança até o fim, "a menos que o tenha sabido por revelação especial". E pede a todos que ponham "a mais firme esperança no auxílio de Deus". Daqui saem três conclusões.</p>
+<p><strong>A promessa é motivo de esperança firme, não de certeza absoluta.</strong> Uma revelação privada feita a uma santa não dá a cada fiel a "revelação especial" de que fala Trento sobre a sua própria salvação. Dá-lhe um motivo de confiança que a Igreja considera digno de fé piedosa. E isso é muito.</p>
+<p><strong>A promessa não suprime a liberdade.</strong> A graça prometida é a da penitência final, a graça de se arrepender. Nenhuma graça salva quem a recusa até o fim. Toda promessa de Deus oferece graças eficazes a quem coopera, e nenhuma anula o livre-arbítrio.</p>
+<p><strong>Fazer as nove sextas com presunção é esvaziá-las.</strong> Quem as fizesse tencionando pecar depois, confiando na "garantia", não ganharia nada. Isto não é magia. A esperança cristã tem dois inimigos, a <strong>presunção</strong>, que acha que a salvação já está no bolso, e o <strong>desespero</strong>, que acha que ela é impossível. O Coração de Jesus cura os dois.</p>
+<p>Pio XII disse isso de forma inesquecível. No culto ao Sagrado Coração, "o mais importante não são as práticas externas de piedade", e "o motivo principal de abraçá-lo não deve ser a esperança dos benefícios que Cristo nosso Senhor prometeu em revelações, e estas privadas". As promessas foram dadas "precisamente para que os homens cumpram com mais fervor os principais deveres da religião católica, a saber: o dever do amor e o da expiação".</p>
+<p>A promessa é real, aprovada e consoladora. O próprio texto pede comunhões feitas "em honra" do Coração, isto é, com amor. É esse amor que o Senhor promete coroar com a graça do arrependimento no fim.</p>
+<h3 id="existe-uma-indulgencia-das-primeiras-sextas">Existe uma indulgência das primeiras sextas?</h3>
+<p>É comum ler em livretos e sites que "a Igreja concede indulgência plenária a quem comunga nas primeiras sextas-feiras de nove meses seguidos". Essa frase não corresponde à disciplina atual da Igreja. Em 1967, Paulo VI reformou as indulgências e determinou que só fossem enriquecidas de indulgências "as principais orações e obras de piedade, de caridade e de penitência". A coleção que resultou dessa reforma, o <em>Enchiridion Indulgentiarum</em>, não traz nenhuma indulgência ligada às primeiras sextas. A frase dos livretos provavelmente repete concessões anteriores a essa reforma.</p>
+<p>Mas a Igreja concede indulgências ligadas a esta devoção, e elas valem a pena:</p>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Indulgência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consagração da família</strong> ao Sagrado Coração (entronização), no dia em que é feita, se possível por um sacerdote ou diácono, diante da imagem</td>
+<td>Plenária (parcial no aniversário)</td>
+</tr>
+<tr>
+<td><strong>Ato de Reparação</strong> "Jesus dulcíssimo…", de Pio XI, recitado publicamente na <strong>solenidade do Sagrado Coração</strong></td>
+<td>Plenária (parcial em outras ocasiões)</td>
+</tr>
+<tr>
+<td><strong>Consagração do gênero humano</strong>, de Leão XIII, recitada publicamente na <strong>solenidade de Cristo Rei</strong></td>
+<td>Plenária (parcial em outras ocasiões)</td>
+</tr>
+<tr>
+<td><strong>Adoração ao Santíssimo Sacramento por pelo menos meia hora</strong>, o que inclui uma Hora Santa</td>
+<td>Plenária, uma vez por dia</td>
+</tr>
+<tr>
+<td><strong>Ladainha do Sagrado Coração</strong>; comunhão espiritual; <em>Alma de Cristo</em></td>
+<td>Parcial</td>
+</tr>
+</tbody>
+</table>
+<p>As indulgências plenárias pedem as condições habituais: confissão sacramental, comunhão eucarística, oração pelas intenções do Papa e completa rejeição de todo apego ao pecado, mesmo venial.</p>
+<p>Na prática: quem faz a Hora Santa da primeira sexta-feira, com pelo menos meia hora de adoração diante do Santíssimo, <strong>pode lucrar indulgência plenária</strong>. Ela vem da adoração, e não do fato de ser primeira sexta. Digamos isso com exatidão.</p>
+<hr />
+<p><em>Para levar consigo.</em> Se você já começou as nove primeiras sextas, ou vai começar, renove hoje a sua intenção com palavras suas. Peça, mais do que uma garantia, a graça de amar. E, se tiver medo de não perseverar, entregue também esse medo ao Coração que prometeu ser "refúgio seguro".</p>
+<hr />
+<h2 id="capitulo-6-as-doze-promessas">Capítulo 6 — As doze promessas</h2>
+<h3 id="a-lista">A lista</h3>
+<p>Ao lado da Grande Promessa, os devotos do Sagrado Coração conhecem uma lista de doze. Na forma mais comum em português:</p>
+<ol>
+<li>Darei a eles todas as graças necessárias ao seu estado de vida.</li>
+<li>Darei paz às suas famílias.</li>
+<li>Eu os consolarei em todas as suas aflições.</li>
+<li>Serei o seu refúgio seguro na vida e sobretudo na morte.</li>
+<li>Derramarei abundantes bênçãos sobre todos os seus empreendimentos.</li>
+<li>Os pecadores encontrarão no meu Coração a fonte e o oceano infinito da misericórdia.</li>
+<li>As almas tíbias tornar-se-ão fervorosas.</li>
+<li>As almas fervorosas elevar-se-ão rapidamente a grande perfeição.</li>
+<li>Abençoarei as casas onde a imagem do meu Sagrado Coração for exposta e venerada.</li>
+<li>Darei aos sacerdotes o dom de tocar os corações mais endurecidos.</li>
+<li>As pessoas que propagarem esta devoção terão o seu nome escrito no meu Coração, e dele jamais será apagado.</li>
+<li>A Grande Promessa.</li>
+</ol>
+<h3 id="como-esta-lista-nasceu">Como esta lista nasceu</h3>
+<p>É comum imaginar que Jesus ditou essas doze promessas numa única ocasião, como quem dita uma carta. A história é outra, e conhecê-la não diminui em nada o valor da lista.</p>
+<p>As promessas <strong>não aparecem como lista</strong> nos escritos de Santa Margarida Maria. Estão espalhadas pelas suas cartas e pela <em>Autobiografia</em>, em formas e datas diferentes. A numeração em doze foi feita depois, no século XIX: uma lista aparece num livreto francês de 1863, e a partir daí, impressa e reimpressa em folhetos, ela correu o mundo e foi traduzida para centenas de línguas.</p>
+<p>Cada promessa da lista é, portanto, uma <strong>paráfrase condensada</strong> de passagens reais. É um bom resumo, e é assim que devemos apresentá-la: como uma compilação fiel do que a santa recebeu, e não como um texto ditado de uma vez.</p>
+<p>Algumas condensações pedem cuidado. Vejamos duas.</p>
+<p><strong>A nona promessa, sobre as imagens</strong>, refere-se às casas onde a imagem do Sagrado Coração é exposta e venerada. Ela encontrou a sua aplicação mais bela na <strong>entronização do Sagrado Coração nos lares</strong>, prática que se espalhou pelo mundo no século XX e que tem hoje indulgência plenária própria no dia em que a família se consagra. Vale aqui o que dissemos no primeiro capítulo: a imagem "de maneira nenhuma" é objeto de adoração, mas "convoca, aponta, conduz" ao encontro com o Cristo vivo. A bênção prometida não está no quadro; está no Senhor que a família acolhe ao entronizá-lo.</p>
+<p><strong>A décima promessa, sobre os sacerdotes</strong>, às vezes é apresentada como se valesse só para os padres que fazem as nove primeiras sextas. A lista não traz essa condição, nem há indício dela nos textos. A promessa se refere aos sacerdotes que têm devoção ao Sagrado Coração e trabalham pela salvação das almas.</p>
+<p>A <strong>décima primeira</strong>, a dos nomes escritos no Coração, já a encontramos antes de Paray, na pena de São Francisco de Sales, que falava de "um coração no qual veremos escritos todos os nossos nomes". A promessa não é uma novidade isolada: insere-se numa tradição.</p>
+<h3 id="a-hora-da-morte">A hora da morte</h3>
+<p>A quarta promessa e a Grande Promessa falam da hora da morte. Não é por acaso. A tradição cristã sempre viu na agonia um momento de combate, o último esforço do inimigo para levar a alma ao desespero. A antiga arte do bem morrer, a <em>ars moriendi</em>, nasceu dessa consciência. É por isso que a Igreja oferece a quem vai morrer a unção dos enfermos e o viático.</p>
+<p>Devemos ler essas palavras como ensinamento espiritual tradicional, e não como detalhe revelado sobre o que se passa em cada morte. Mas a intuição é verdadeira: a última hora é decisiva, e o Coração de Jesus prometeu ser, nela, "refúgio seguro".</p>
+<hr />
+<p><em>Para levar consigo.</em> Qual das doze promessas toca mais a sua vida hoje? Não a transforme em cobrança. Transforme-a em oração: "Senhor, Vós dissestes… eu confio".</p>
+<hr />
+<h2 id="capitulo-7-consolar-o-coracao-de-cristo">Capítulo 7 — Consolar o Coração de Cristo</h2>
+<h3 id="o-centro-esquecido">O centro esquecido</h3>
+<p>Se perguntarmos a quem faz as nove primeiras sextas por que as faz, muitos falarão das promessas. Poucos falarão de <strong>reparação</strong>. E, no entanto, é ela o centro desta devoção. As nove primeiras sextas não são uma coleção de promessas: são, antes de tudo, <strong>comunhões de reparação</strong>. A promessa foi dada para que fizéssemos expiação ao Coração de Jesus pelas comunhões tíbias e sacrílegas. E por isso a devoção não termina na nona sexta-feira: ela forma um hábito para a vida.</p>
+<p>A palavra que funda tudo é a da grande aparição de 1675, que Pio XI cita na sua encíclica sobre a reparação, <em>Miserentissimus Redemptor</em>:</p>
+<blockquote>
+<p>"Eis este Coração que tanto amou os homens… e em retribuição só recebe, da maior parte, ingratidão, irreverências e sacrilégios, frieza e desprezo neste sacramento de amor."</p>
+</blockquote>
+<p>E Jesus continua, numa passagem menos conhecida: pede que, pelo fervor de quem o ama, sejam reparadas as ofensas que recebe de "corações tíbios e preguiçosos" que o desonram no Santíssimo Sacramento.</p>
+<h3 id="pode-se-consolar-cristo-glorioso">Pode-se consolar Cristo glorioso?</h3>
+<p>A objeção é natural. Cristo ressuscitou e está à direita do Pai. Ele não sofre mais. Como podemos consolá-lo?</p>
+<p>Pio XI respondeu com uma intuição de grande beleza. Se a alma de Cristo se entristeceu até a morte à vista dos nossos pecados futuros, "não há dúvida que desde então Lhe tenha dado algum conforto a previsão do nosso desagravo", como o anjo que o consolou no Horto (Lc 22,43). E conclui: "podemos e devemos consolar este Coração Sacratíssimo". Em outras palavras: na agonia, Jesus via todos os tempos. A Hora Santa que fazemos hoje consolou-o no Getsêmani.</p>
+<p>O papa acrescenta outro ângulo. Cristo ainda sofre no seu Corpo místico, que é a Igreja, e por isso quer que tomemos parte na sua expiação, pois "se um membro sofre, todos os membros sofrem com ele" (1Cor 12,26). O Papa Francisco retoma esse ensinamento: o mistério da Paixão "transcende todas as distâncias do tempo e do espaço", e o desejo de consolar Cristo nasce do coração apaixonado pelo Senhor, que tem as suas "razões do coração".</p>
+<h3 id="tres-modos-de-reparar-que-sao-um-so">Três modos de reparar, que são um só</h3>
+<p>A reparação tem muitos rostos. Há a reparação <strong>eucarística</strong>: a comunhão fervorosa, a adoração, a Hora Santa. Há a reparação <strong>penitencial</strong>: o jejum, a oração pela conversão dos pecadores. E há a reparação <strong>caritativa</strong>: as obras de caridade oferecidas em espírito de reparação. Costumamos apresentá-las separadas. Na verdade, são uma só.</p>
+<p>O Papa Francisco dedicou a este tema um capítulo inteiro de <em>Dilexit nos</em>, e o apresenta em duas dimensões.</p>
+<p>A primeira é a <strong>reparação social</strong>. Retomando São João Paulo II, ele ensina que "sobre as ruínas acumuladas pelo ódio e pela violência" se constrói a civilização do amor, e que "esta é a verdadeira reparação pedida pelo Coração do Salvador". Reparar inclui reparar as estruturas de pecado e curar os corações feridos. Há aqui uma aplicação muito concreta para os nossos grupos: diante dos pecados que ferem a Igreja, inclusive os dos seus ministros, a atitude do devoto do Sagrado Coração não é só lamentar ou atacar, mas reparar.</p>
+<p>A segunda é a reparação como <strong>prolongamento do Coração de Cristo</strong>. Os nossos atos de amor fraterno dão ao Senhor "a possibilidade de se dilatar" no mundo. Mas atenção: essa reparação é sempre participação no único sacrifício de Cristo, o único mediador (1Tm 2,5-6). Completamos na nossa carne o que falta às tribulações de Cristo (cf. Cl 1,24), mas nunca acrescentamos ao seu sacrifício algo por conta própria.</p>
+<p>Se tivéssemos de resumir tudo numa frase, seria esta: <strong>reparar é amar no lugar de quem não ama</strong>. Na adoração, na comunhão fervorosa, na penitência e na caridade concreta.</p>
+<h3 id="uma-palavra-sobre-os-milagres-eucaristicos">Uma palavra sobre os milagres eucarísticos</h3>
+<p>Para mostrar a ligação entre a Eucaristia e o Coração, às vezes se diz que nos milagres eucarísticos o resultado "é sempre tecido cardíaco". Convém ter prudência. Houve exames em alguns casos célebres, como o de Lanciano, na Itália, que foram divulgados nesse sentido, mas esses laudos foram contestados por outros cientistas. A Igreja nunca ensinou que os milagres eucarísticos sejam "sempre" tecido cardíaco, e a fé na presença real não depende de nenhum laudo.</p>
+<p>O que é verdadeiro, e não precisa de laboratório, é que a Eucaristia é o sacramento do amor e está intimamente ligada ao Coração de Cristo. Foi o próprio Senhor quem pediu que a festa do seu Coração viesse logo depois da festa do seu Corpo.</p>
+<hr />
+<p><em>Para levar consigo.</em> Pense numa pessoa que você conhece e que está longe de Deus. Na próxima comunhão, ofereça-a por ela, sem que ela saiba. Isso é amar no lugar de quem não ama.</p>
+<hr />
+<h2 id="capitulo-8-vigiar-uma-hora">Capítulo 8 — Vigiar uma hora</h2>
+<h3 id="o-getsemani">O Getsêmani</h3>
+<p>A Hora Santa nasceu de um pedido muito concreto. Jesus pediu a Margarida Maria que, toda <strong>quinta-feira à noite</strong>, ela se levantasse entre as <strong>onze horas e a meia-noite</strong> e passasse uma hora prostrada, unida à sua agonia no Horto, para compensar o sono dos apóstolos: "Não fostes capazes de vigiar uma hora comigo?" (Mt 26,40).</p>
+<p>Muitas Horas Santas abrem com uma fórmula que resume esse pedido: passar uma hora em oração "para aplacar a justiça divina, implorar misericórdia para os pecadores, honrar-me e consolar-me" no abandono em que os apóstolos o deixaram.</p>
+<p>Note-se: o pedido original é de uma hora <strong>semanal, na noite de quinta-feira</strong>. A prática de fazer a Hora Santa na quinta-feira anterior à primeira sexta, ou na própria primeira sexta, é uma <strong>adaptação pastoral legítima</strong> e muito difundida, mas não é o texto do pedido. Podemos fazê-la de um modo ou de outro, sabendo de onde vem.</p>
+<p>Pio XI registra que a comunhão reparadora e a Hora Santa, pedidas em Paray, foram aprovadas pela Igreja. E o Papa Francisco equilibra os dois lados com uma frase que todo grupo de oração deveria conhecer: "ninguém deve sentir-se obrigado a fazer uma hora de adoração às quintas-feiras. Mas como não o recomendar?"</p>
+<h3 id="um-pedido-surpreendente-para-o-seu-tempo">Um pedido surpreendente para o seu tempo</h3>
+<p>Para nós, a comunhão frequente é algo natural. No século XVII não era. Muitos deixavam de comungar por não confiarem na misericórdia e consideravam a comunhão "uma espécie de recompensa para os perfeitos". Era a mentalidade do <strong>jansenismo</strong>, o rigorismo moral da época. Nesse contexto, o pedido de comungar todas as primeiras sextas-feiras foi uma mensagem forte. O Papa Francisco o lê exatamente assim.</p>
+<p>A Igreja já desejava outra coisa. O Concílio de Trento queria que, "em cada Missa, os fiéis presentes comungassem não só pelo desejo espiritual, mas também pela recepção sacramental da Eucaristia". Mas foi só com São Pio X, pelo decreto <em>Sacra Tridentina Synodus</em>, de 20 de dezembro de 1905, que a comunhão frequente e diária foi plenamente aberta a todos os fiéis em estado de graça.</p>
+<p>O Papa Francisco acrescenta um motivo atual. No meio das distrações, "dos telefones e das redes sociais", esquecemos de alimentar a vida com a Eucaristia, e por isso a prática das primeiras sextas "hoje também faria muito bem".</p>
+<h3 id="uma-festa-pedida-a-uma-alma-mistica">Uma festa pedida a uma alma mística</h3>
+<p>Não é a primeira vez na história que uma festa nasce do pedido feito a uma alma simples. A festa de Corpus Christi nasceu das visões de Santa Juliana de Mont-Cornillon, em Liège, no início do século XIII. Um sínodo de 1246 mandou celebrá-la na diocese de Liège, onde foi celebrada pela primeira vez em 1247. Em 1264, o Papa Urbano IV a estendeu a toda a Igreja latina, e Santo Tomás de Aquino compôs o seu ofício a pedido do papa.</p>
+<p>A comparação ajuda a entender o calendário: a festa do Coração vem logo depois da festa do Corpo de Cristo. Não são duas devoções. São dois olhares sobre o mesmo amor.</p>
+<h3 id="por-que-adorar-fora-da-missa">Por que adorar fora da Missa</h3>
+<p>Alguém poderia perguntar: se a Eucaristia foi dada para ser comida, por que adorá-la exposta? A Igreja responde que "sempre prestou e continua a prestar este culto de adoração que é devido ao sacramento da Eucaristia, não só durante a missa, mas também fora da sua celebração". O sacrário deve estar num lugar "particularmente digno", e a Igreja tomou consciência "do sentido da adoração silenciosa do Senhor". Cristo quis que tivéssemos "o memorial do amor com que nos amou 'até ao fim' (Jo 13,1)". Na presença eucarística, "Ele fica misteriosamente no meio de nós, como Aquele que nos amou e Se entregou por nós".</p>
+<p>Bento XVI enfrentou diretamente a objeção de que o pão eucarístico seria dado "não para ser contemplado, mas comido". Respondeu com Santo Agostinho: "ninguém come esta carne, sem antes a adorar; (...) pecaríamos se não a adorássemos". E recomendou "vivamente" a adoração "tanto pessoal como comunitária", pedindo que paróquias e grupos promovam "momentos de adoração comunitária".</p>
+<h3 id="o-texto-que-une-tudo">O texto que une tudo</h3>
+<p>Se tivéssemos de escolher uma só página do Magistério para justificar a Hora Santa da primeira sexta-feira, seria esta, de São João Paulo II, na encíclica <em>Ecclesia de Eucharistia</em>:</p>
+<blockquote>
+<p>"É bom demorar-se com Ele e, inclinado sobre o seu peito como o discípulo predilecto (cf. Jo 13, 25), deixar-se tocar pelo amor infinito do seu coração. […] como não sentir de novo a necessidade de permanecer longamente, em diálogo espiritual, adoração silenciosa, atitude de amor, diante de Cristo presente no Santíssimo Sacramento?"</p>
+</blockquote>
+<p>No mesmo texto, o papa cita Santo Afonso de Ligório: adorar Jesus sacramentado é, "depois dos sacramentos, a primeira de todas as devoções". Eis a Hora Santa: ao mesmo tempo adoração eucarística e contemplação do Coração, a cabeça inclinada sobre o peito do Senhor, como João.</p>
+<p>Há um costume bonito que alguns sacerdotes adotam: ler, durante a adoração, um trecho do Magistério sobre a Eucaristia, mês a mês. Dessa mesma encíclica vem uma frase que merece ser lida diante do Santíssimo: "podemos dizer não só que cada um de nós recebe Cristo, mas também que Cristo recebe cada um de nós".</p>
+<h3 id="um-testemunho-do-nosso-tempo">Um testemunho do nosso tempo</h3>
+<p>Poucos viveram a Hora Santa com tanta fidelidade quanto Fulton Sheen. No dia da sua ordenação, prometeu fazer uma Hora Santa diária e cumpriu a promessa por toda a vida, insistindo nela junto aos padres. Há pastores que, como ele, "prescrevem" a Hora Santa a quem atravessa dificuldades, como um médico prescreve um remédio. O conselho é sólido, desde que entendido como testemunho pastoral, e não como promessa revelada. Em 24 de setembro de 2026, Fulton Sheen foi beatificado em St. Louis, nos Estados Unidos, numa celebração presidida pelo Cardeal Luis Antonio Tagle.</p>
+<hr />
+<p><em>Para levar consigo.</em> Se nunca fez uma Hora Santa sozinho, comece por meia hora. Leve só a Bíblia aberta em Mateus 26,36-46. Leia, cale-se, e fique. Não é preciso dizer muito. É preciso ficar.</p>
+<hr />
+<h2 id="capitulo-9-o-que-os-papas-ensinaram">Capítulo 9 — O que os papas ensinaram</h2>
+<p>Uma devoção nascida num mosteiro de província tornou-se, em pouco mais de dois séculos, uma das devoções mais amadas da Igreja universal. Esse caminho foi acompanhado, passo a passo, pelos sucessores de Pedro.</p>
+<h3 id="da-polonia-a-igreja-inteira">Da Polônia à Igreja inteira</h3>
+<p>Já vimos o primeiro passo: em 1765, Clemente XIII concedeu a festa do Sagrado Coração aos bispos da Polônia e à arquiconfraria romana. Quase um século depois, em 23 de agosto de 1856, <strong>Pio IX</strong> estendeu a festa à <strong>Igreja universal</strong>. Foi também Pio IX quem beatificou Margarida Maria, em 1864, e quem aprovou, em 8 de maio de 1873, a devoção do mês de junho ao Sagrado Coração, "longamente praticada em particular".</p>
+<h3 id="leao-xiii-e-a-consagracao-do-mundo">Leão XIII e a consagração do mundo</h3>
+<p><strong>Leão XIII</strong> deu à devoção um alcance novo. Em 28 de junho de 1889 elevou a festa à primeira classe. Em 27 de junho de 1898 aprovou a Ladainha do Sagrado Coração para as dioceses de Marselha e de Autun e para a Ordem da Visitação, e em 2 de abril de 1899 estendeu-a a toda a Igreja. Naquele mesmo ano, na encíclica <em>Annum Sacrum</em>, de 25 de maio, anunciou um gesto sem precedentes: a <strong>consagração de todo o gênero humano</strong> ao Sagrado Coração. Depois de um tríduo de 9 a 11 de junho, a consagração foi feita em 11 de junho de 1899, com a oração composta para a ocasião: "Jesus dulcíssimo, Redentor do gênero humano…". Leão XIII chamava esta devoção "estimadíssima prática religiosa" e "poderoso remédio" para os males do seu tempo.</p>
+<h3 id="sao-pio-x-e-bento-xv">São Pio X e Bento XV</h3>
+<p><strong>São Pio X</strong> abriu a todos a comunhão frequente e diária, em 1905, e em 1906 mandou renovar todos os anos a consagração do gênero humano. <strong>Bento XV</strong> canonizou Santa Margarida Maria em 13 de maio de 1920 e, como vimos, citou a Grande Promessa na bula de canonização.</p>
+<h3 id="pio-xi-e-a-reparacao">Pio XI e a reparação</h3>
+<p><strong>Pio XI</strong> escreveu, em 8 de maio de 1928, a encíclica <em>Miserentissimus Redemptor</em>, inteiramente dedicada à reparação. Nela reafirma que Cristo se manifestou a Santa Margarida Maria e apresenta como traços da devoção a comunhão reparadora, a Hora Santa e a festa. Registra que o costume da comunhão na primeira sexta-feira, "por desejo de Cristo Jesus", já se havia difundido "por toda parte". Prescreve que o Ato de Reparação, "Jesus dulcíssimo, cuja imensa caridade para com os homens…", seja rezado solenemente todos os anos na festa do Sagrado Coração, que na mesma ocasião elevou à primeira classe com oitava. Para Pio XI, esta devoção era o "compêndio de toda a religião".</p>
+<h3 id="pio-xii-e-o-fundamento-teologico">Pio XII e o fundamento teológico</h3>
+<p>Em 15 de maio de 1956, <strong>Pio XII</strong> publicou <em>Haurietis aquas</em>, a grande síntese bíblica e teológica sobre o Sagrado Coração. Já a encontramos várias vezes neste livro. Foi ela que mostrou que a devoção não nasce de revelações privadas, que expôs o tríplice amor do Coração de Cristo e que respondeu às objeções do seu tempo.</p>
+<h3 id="de-joao-paulo-ii-a-leao-xiv">De João Paulo II a Leão XIV</h3>
+<p>Em 11 de junho de 1999, no centenário da consagração de Leão XIII, <strong>São João Paulo II</strong> escreveu uma carta comemorativa. Recordou que São Pio X mandara renovar a consagração todos os anos e afirmou que "ainda hoje é bom renová-la todos os anos". A carta não foi um novo ato solene de consagração, mas uma recomendação explícita que os grupos de oração podem acolher.</p>
+<p>Em 2024, ano em que se celebraram os 350 anos das aparições de Paray, com o colóquio <em>Réparer l'irréparable</em> naquela cidade, o <strong>Papa Francisco</strong> publicou, em 24 de outubro, a encíclica <em>Dilexit nos</em>, a mais ampla do Magistério sobre o Sagrado Coração desde <em>Haurietis aquas</em>. Ela valoriza a prática das primeiras sextas, a Hora Santa e a consolação de Cristo; lembra ao mesmo tempo que as visões não obrigam; e mostra a dimensão social da reparação. Para quem pratica as primeiras sextas, é hoje o texto de referência.</p>
+<p>Por fim, na solenidade do Sagrado Coração de 27 de junho de 2025, durante o Jubileu dos Sacerdotes, <strong>Leão XIV</strong> retomou a encíclica do seu predecessor: «Da ferida do lado de Cristo continua a correr aquele rio que nunca se esgota».</p>
+<h3 id="uma-linha-continua">Uma linha contínua</h3>
+<table class="long-table">
+<thead>
+<tr>
+<th>Ano</th>
+<th>Papa</th>
+<th>O que fez</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1765</td>
+<td>Clemente XIII</td>
+<td>Festa concedida aos bispos da Polônia e à arquiconfraria romana</td>
+</tr>
+<tr>
+<td>1856</td>
+<td>Pio IX</td>
+<td>Festa estendida à Igreja universal</td>
+</tr>
+<tr>
+<td>1864</td>
+<td>Pio IX</td>
+<td>Beatificação de Margarida Maria</td>
+</tr>
+<tr>
+<td>1889</td>
+<td>Leão XIII</td>
+<td>Festa elevada à primeira classe</td>
+</tr>
+<tr>
+<td>1898–1899</td>
+<td>Leão XIII</td>
+<td>Ladainha aprovada e estendida a toda a Igreja; <em>Annum Sacrum</em>; consagração do gênero humano</td>
+</tr>
+<tr>
+<td>1905–1906</td>
+<td>São Pio X</td>
+<td>Comunhão frequente; renovação anual da consagração</td>
+</tr>
+<tr>
+<td>1920</td>
+<td>Bento XV</td>
+<td>Canonização; a Grande Promessa citada na bula</td>
+</tr>
+<tr>
+<td>1928</td>
+<td>Pio XI</td>
+<td><em>Miserentissimus Redemptor</em>; Ato de Reparação anual</td>
+</tr>
+<tr>
+<td>1956</td>
+<td>Pio XII</td>
+<td><em>Haurietis aquas</em></td>
+</tr>
+<tr>
+<td>1999</td>
+<td>São João Paulo II</td>
+<td>Carta do centenário da consagração</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>Francisco</td>
+<td><em>Dilexit nos</em></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>Leão XIV</td>
+<td>Homilia na solenidade, no Jubileu dos Sacerdotes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Para levar consigo.</em> Em junho, ou na solenidade de Cristo Rei, proponha ao seu grupo renovar a consagração do gênero humano de Leão XIII. É uma oração de mais de um século, que a Igreja pediu que não deixássemos cair.</p>
+<hr />
+<h2 id="capitulo-10-perguntas-que-todos-fazem">Capítulo 10 — Perguntas que todos fazem</h2>
+<p>Quem ama esta devoção cedo ou tarde ouve críticas. Algumas vêm de fora, outras de dentro da própria Igreja. A boa notícia é que o Magistério as conhece há muito tempo, e respondeu a elas. Reunimos aqui as mais frequentes.</p>
+<p><strong>"Isto é sentimentalismo, devoção para gente pouco instruída."</strong>
+Pio XII conhecia a crítica: dizia-se que a devoção era "mais própria para mulheres do que para pessoas cultas". Ele a rejeitou. O culto ao Coração de Jesus é "um ato de religião excelentíssimo", porque pede "plena e inteira vontade de entrega e consagração" ao amor do Redentor. O Papa Francisco pergunta se não há "mais racionalidade, mais verdade e mais sabedoria" na piedade simples que consola Cristo do que nos "atos de amor frios, distantes, calculados e mínimos".</p>
+<p><strong>"Isso não está na Bíblia."</strong>
+O culto explícito ao coração físico de Jesus não está, e a Igreja o reconhece abertamente. Mas o amor que ele simboliza percorre toda a Escritura e culmina no lado aberto (Jo 19,34-37). Foi o que vimos no segundo capítulo.</p>
+<p><strong>"A devoção nasceu de visões particulares."</strong>
+Não. Nas palavras de Pio XII, "não se pode dizer nem que este culto deve a sua origem a revelações privadas, nem que apareceu de improviso na Igreja". As revelações a Santa Margarida Maria "não acrescentaram nada de novo à doutrina católica". E a festa foi aprovada em 1765 "independentemente de toda revelação privada".</p>
+<p><strong>"É uma devoção passiva, de penitência, que não leva à ação."</strong>
+Também essa crítica é antiga: julgava-se a devoção inadequada por pedir virtudes "passivas". Pio XII a propôs, ao contrário, como "escola eficacíssima de caridade divina" para as famílias e as nações. E o Papa Francisco mostra que a resposta ao Coração de Cristo é o amor concreto aos irmãos: "Sempre que fizestes isto a um destes meus irmãos mais pequeninos, a mim mesmo o fizestes" (Mt 25,40).</p>
+<p><strong>"É uma devoção ultrapassada."</strong>
+Leão XIII a chamou "poderoso remédio" para os males do tempo; Pio XI, "compêndio de toda a religião". E o Papa Francisco escreveu <em>Dilexit nos</em> justamente pensando na sensibilidade do nosso tempo.</p>
+<p><strong>"Desvia de Cristo para uma imagem ou para um órgão."</strong>
+Adora-se a Pessoa de Jesus, inteira, e nunca a imagem nem um órgão separado. O primeiro capítulo deste livro foi dedicado a isso.</p>
+<p><strong>"Afasta da adoração do Deus altíssimo."</strong>
+Era a objeção jansenista, de quem "desprezava tudo o que era humano, afetivo, corpóreo". Pio XII a chamou "falso misticismo". O Papa Francisco adverte que esse dualismo "renasceu com novos rostos", como uma "espiritualidade sem carne".</p>
+<p><strong>"A Igreja de hoje precisa de reformas e de ação, não de devoções."</strong>
+O Papa Francisco aponta aqui "outro dualismo": comunidades concentradas "apenas em atividades exteriores, em reformas estruturais desprovidas de Evangelho", que acabam num cristianismo que "esqueceu a ternura da fé".</p>
+<p><strong>"Quem não se sente atraído por esta devoção é menos católico."</strong>
+Também não. As visões não obrigam. Ninguém deve sentir-se obrigado à Hora Santa de quinta-feira. E a imagem do Coração "não é o único recurso" do Espírito para nos levar ao amor de Cristo.</p>
+<h3 id="o-equilibrio-da-igreja">O equilíbrio da Igreja</h3>
+<p>Repare-se no movimento destas respostas. O Magistério defende a devoção com firmeza e, ao mesmo tempo, recusa impô-la como obrigação. Quem conduz um grupo deve fazer o mesmo: propor com entusiasmo, sem constranger, e explicar sempre que o centro é o amor de Cristo, e não as práticas em si.</p>
+<hr />
+<p><em>Para levar consigo.</em> Qual dessas objeções você já ouviu, ou já pensou? Da próxima vez que ela aparecer, não discuta: responda com serenidade e, se puder, convide a pessoa para uma Hora Santa.</p>
+<hr />
+<h2 id="capitulo-11-os-santos-depois-de-paray-e-maria">Capítulo 11 — Os santos depois de Paray, e Maria</h2>
+<h3 id="dois-santos-que-ajudaram-a-entender-melhor">Dois santos que ajudaram a entender melhor</h3>
+<p>O Papa Francisco escolheu dois santos que, "sem o pretenderem, reformularam certos elementos da devoção ao Coração de Cristo, ajudando-nos a compreendê-la de uma forma ainda mais fiel ao Evangelho".</p>
+<p><strong>São Charles de Foucauld</strong> (1858–1916) converteu-se pela mediação de uma prima, Madame de Bondy, que um dia lhe mostrou uma imagem do Sagrado Coração. Consagrou-se ao Sagrado Coração em 6 de junho de 1889 e quis ser eremita "sob o nome do Sagrado Coração". Em 17 de maio de 1906 escreveu: "Deixar viver em mim o Coração de Jesus, de modo que já não seja eu a viver, mas o Coração de Jesus que viva em mim, como vivia em Nazaré". Adotou como lema <em>Iesus Caritas</em>, com o símbolo do Coração de Cristo encimado por uma cruz, e fez disso um programa de vida entre os mais pobres.</p>
+<p><strong>Santa Teresa do Menino Jesus</strong> (1873–1897) cresceu num ambiente impregnado desta devoção; uma das suas irmãs chamava-se "Maria do Sagrado Coração". Mas a sua devoção tinha traços próprios: "eu não vejo o Sagrado Coração como toda a gente". Insistiu mais na confiança do que nos sacrifícios: "o mérito não consiste em fazer nem em dar muito, mas antes em receber". E ainda: "O meu caminho é todo de confiança e de amor, não compreendo as almas que têm medo de um Amigo tão terno". Ofereceu-se "como vítima de holocausto ao vosso amor misericordioso", e não à justiça divina.</p>
+<p>As duas figuras corrigem, por dentro, o risco de que falamos ao tratar da Grande Promessa: fazer a devoção depender do esforço e do "merecimento". Teresa nos ensina a fazer as nove primeiras sextas <strong>por confiança</strong>, e não como quem compra uma garantia.</p>
+<h3 id="outros-testemunhos">Outros testemunhos</h3>
+<p><strong>São Vicente de Paulo</strong> dizia: "Deus pede principalmente o coração". E pedia aos seus "esse coração do Filho de Deus… que nos dispõe a ir como Ele iria" em missão.</p>
+<p><strong>A Companhia de Jesus</strong>, que tanto fez pela devoção desde São Cláudio, foi consagrada ao Sagrado Coração em 1871. Em 1883 declarou aceitar o "suavíssimo encargo" de propagá-la, e em 1972 o Pe. Pedro Arrupe renovou a consagração.</p>
+<p>Muitas congregações nasceram ou cresceram marcadas pelo Coração de Cristo. São Daniel Comboni, por exemplo, "encontrou no mistério do Coração de Jesus a força para o seu empenho missionário".</p>
+<p>E não podemos esquecer quem levou o Sagrado Coração para dentro das casas. O Pe. Mateo Crawley-Boevey (1875–1960), religioso dos Sagrados Corações, depois de ser curado em Paray-le-Monial em 24 de agosto de 1907, iniciou a "cruzada" da <strong>entronização do Sagrado Coração nas famílias</strong>. Apresentou o projeto a São Pio X, que o encorajou a dedicar-lhe a vida.</p>
+<h3 id="maria-e-o-coracao-de-jesus">Maria e o Coração de Jesus</h3>
+<p>É natural honrar juntos o Sagrado Coração de Jesus e o Imaculado Coração de Maria. A Igreja apoia essa prática, com uma ordem clara.</p>
+<p>Pio XII pedia que os fiéis procurassem "unir a ela estreitamente a devoção ao coração imaculado da Mãe de Deus", porque Maria esteve "inseparavelmente unida a Jesus Cristo" na redenção. Assim, depois do culto devido ao Sagrado Coração, convém render ao coração de Maria "os correspondentes obséquios de piedade, de amor, de agradecimento e de reparação".</p>
+<p>O Papa Francisco precisa o sentido: a mediação de Maria só se entende "como participação nesta única fonte, que é a mediação do próprio Cristo". E "a devoção ao coração de Maria não quer enfraquecer a adoração única devida ao Coração de Cristo, mas estimulá-la". Há mais: foi com Maria que Jesus aprendeu, humanamente, a atenção às pessoas. Ela "guardava tudo no seu coração" (Lc 2,19.51).</p>
+<h3 id="primeiras-sextas-e-primeiros-sabados">Primeiras sextas e primeiros sábados</h3>
+<p>Na prática, isso se traduz na sequência natural do mês: a <strong>primeira sexta-feira</strong>, dedicada ao Coração de Jesus, seguida do <strong>primeiro sábado</strong>, dedicado ao Coração de Maria. As duas devoções são irmãs, mas não são iguais, e convém não as confundir.</p>
+<p>A devoção dos primeiros sábados está ligada a Fátima. Em 13 de julho de 1917, Nossa Senhora anunciou: "virei pedir a consagração da Rússia a meu Imaculado Coração e a comunhão reparadora nos primeiros sábados". O pedido propriamente dito, com a promessa, veio depois, em Pontevedra, na Espanha, em 10 de dezembro de 1925, numa aparição à Irmã Lúcia.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Primeiras sextas</strong></th>
+<th><strong>Primeiros sábados</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origem</td>
+<td>Santa Margarida Maria, Paray-le-Monial (carta de maio de 1688)</td>
+<td>Irmã Lúcia, Pontevedra, 10 de dezembro de 1925, retomando o anúncio de Fátima de 13 de julho de 1917</td>
+</tr>
+<tr>
+<td>Quantos</td>
+<td><strong>Nove</strong> meses seguidos</td>
+<td><strong>Cinco</strong> meses seguidos</td>
+</tr>
+<tr>
+<td>O que fazer</td>
+<td>Comunhão reparadora</td>
+<td>Confissão, comunhão, um terço e quinze minutos de meditação sobre os mistérios, em reparação ao Imaculado Coração de Maria</td>
+</tr>
+<tr>
+<td>Confissão</td>
+<td>Necessária só havendo pecado grave; sem prazo</td>
+<td>Exigida; pode ser feita em até oito dias, esclarecimento dado a Lúcia em 15 de fevereiro de 1926</td>
+</tr>
+<tr>
+<td>Promessa</td>
+<td>Graça da penitência final; não morrer sem os sacramentos</td>
+<td>Assistência na hora da morte "com as graças necessárias para a salvação"</td>
+</tr>
+</tbody>
+</table>
+<p>Três observações. Primeiro: são <strong>cinco</strong> os primeiros sábados, e não nove. Segundo: o prazo de oito dias para a confissão pertence aos sábados, e não às sextas. Terceiro: não tem sentido dizer que os sábados dão "só graças" enquanto as sextas "garantem o céu". Ambas as promessas oferecem graças eficazes a quem coopera, e nenhuma suprime a liberdade.</p>
+<p>O bispo de Leiria declarou dignas de crédito as aparições de Fátima em 13 de outubro de 1930. Também elas são revelação privada. O então Cardeal Ratzinger disse da mensagem de Fátima o que vale para as duas devoções: "É uma ajuda que é oferecida, mas não é obrigatório fazer uso dela". E a frase de Fátima que tantos repetem, "muitas almas vão para o inferno por não haver quem se sacrifique e reze por elas", lembra-nos que a reparação nunca é só assunto entre mim e Deus: é também amor pelos outros.</p>
+<h3 id="amor-por-amor">Amor por amor</h3>
+<p>Falamos muito do que Jesus promete. Falemos, para terminar, do que Ele pede.</p>
+<p>Santa Margarida Maria registrou o pedido: "Tenho sede… de ser amado pelos homens no Santíssimo Sacramento". O Papa Francisco comenta que a resposta "não é uma custosa busca de sacrifícios ou o mero cumprimento de um pesado dever, é uma questão de amor".</p>
+<p>Esse amor tem um lugar privilegiado: os irmãos. "Sempre que fizestes isto a um destes meus irmãos mais pequeninos, a mim mesmo o fizestes" (Mt 25,40). E esse amor é dom: "O amor aos irmãos não se fabrica… exige uma transformação do nosso coração egoísta. Nasce então espontaneamente a célebre súplica: 'Jesus, fazei o nosso coração semelhante ao Vosso'". É, mais uma vez, o versículo que fecha a Ladainha.</p>
+<p>São Francisco de Sales sabia que esse amor se joga nas coisas pequenas: "nas coisas mais simples e ordinárias roubamos o coração do Senhor". E dava exemplos: "esta dor de cabeça, esta dor de dentes… este copo quebrado", vividos por amor.</p>
+<p>Esse amor, enfim, leva à missão. O risco, adverte Francisco, é que "se digam e façam muitas coisas, mas não se consiga promover o encontro feliz com o amor de Cristo".</p>
+<hr />
+<p><em>Para levar consigo.</em> Hoje, ofereça ao Coração de Jesus uma contrariedade pequena, das que São Francisco de Sales chamava "copo quebrado". Sem anunciar a ninguém. Amor por amor.</p>
+<hr />
+<h2 id="capitulo-12-o-ano-do-coracao">Capítulo 12 — O ano do Coração</h2>
+<h3 id="a-solenidade">A solenidade</h3>
+<p>A festa pedida em 1675 é hoje uma solenidade de toda a Igreja. Ela é celebrada na sexta-feira depois do segundo domingo depois de Pentecostes, isto é, na sexta-feira que se segue à semana de Corpus Christi, conforme o pedido de Paray. Em 2027 cairá em 4 de junho.</p>
+<p>As leituras da Missa mudam conforme o ano do ciclo litúrgico, e cada série é uma pequena catequese sobre o Coração de Cristo:</p>
+<table>
+<thead>
+<tr>
+<th>Ano</th>
+<th>1ª leitura</th>
+<th>2ª leitura</th>
+<th>Evangelho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Dt 7,6-11 (Deus vos escolheu por amor)</td>
+<td>1Jo 4,7-16 (Deus é amor)</td>
+<td>Mt 11,25-30 (manso e humilde de coração)</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Os 11,1.3-4.8c-9 (laços de amor)</td>
+<td>Ef 3,8-12.14-19 (o amor que excede todo conhecimento)</td>
+<td>Jo 19,31-37 (o lado aberto)</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Ez 34,11-16 (o pastor que procura as ovelhas)</td>
+<td>Rm 5,5b-11 (o amor de Deus derramado)</td>
+<td>Lc 15,3-7 (a ovelha perdida)</td>
+</tr>
+</tbody>
+</table>
+<p>O ano de 2027 é o ano B. Na solenidade de 4 de junho de 2027, a Igreja lerá justamente Oseias 11 e o lado aberto de João 19, os dois textos que meditamos no segundo capítulo.</p>
+<p>Desde 1995, por decisão de São João Paulo II, a solenidade é também o <strong>Dia Mundial de Oração pela Santificação dos Sacerdotes</strong>. Faz todo o sentido. O Catecismo recolhe a frase do Cura d'Ars, São João Vianney: "O sacerdócio é o amor do Coração de Jesus". Leão XIV celebrou essa solenidade em 2025 com ordenações sacerdotais, no Jubileu dos Sacerdotes.</p>
+<p>Dois atos estão ligados ao calendário: o Ato de Reparação de Pio XI, recitado na solenidade do Sagrado Coração, e a consagração do gênero humano de Leão XIII, na solenidade de Cristo Rei. Recitados publicamente nesses dias, ambos dão indulgência plenária.</p>
+<h3 id="o-mes-de-junho">O mês de junho</h3>
+<p>A devoção do mês de junho ao Sagrado Coração, longamente praticada em particular, foi aprovada por Pio IX em 8 de maio de 1873 e recomendada por Leão XIII, em carta da Congregação dos Ritos a todos os bispos, em 21 de julho de 1899. É uma boa ocasião para os grupos intensificarem a oração e, por exemplo, incluírem na Hora Santa o Ato de Reparação de Pio XI.</p>
+<h3 id="a-missa-votiva-na-primeira-sexta-feira">A Missa votiva na primeira sexta-feira</h3>
+<p>O Missal Romano tem uma <strong>Missa votiva do Sagrado Coração de Jesus</strong>. As normas do Missal permitem as Missas votivas "dos mistérios do Senhor" nos dias feriais do Tempo Comum, "mesmo quando ocorre uma memória facultativa", "para satisfazer à piedade dos fiéis".</p>
+<p>Na prática: quando a primeira sexta-feira cai num dia ferial do Tempo Comum, o sacerdote <strong>pode</strong> celebrar a Missa votiva do Sagrado Coração. Em outros tempos litúrgicos, ou havendo memória obrigatória, festa ou solenidade, segue-se a liturgia do dia. A decisão é do celebrante. O grupo pode pedi-la, não exigi-la. E lembremos que a Grande Promessa pede a <strong>comunhão</strong> na primeira sexta-feira, e não um formulário de Missa específico.</p>
+<p>Uma nota histórica: o Missal de 1962 previa expressamente Missas votivas do Sagrado Coração nas primeiras sextas. O Missal atual não traz essa permissão específica e regula o tema pela norma geral que acabamos de ver.</p>
+<hr />
+<p><em>Para levar consigo.</em> Marque na sua agenda a próxima solenidade do Sagrado Coração. Leia, na véspera, o Evangelho do dia. Chegue à Missa sabendo o que a Igreja vai proclamar.</p>
+<hr />
+<h2 id="capitulo-13-na-pratica">Capítulo 13 — Na prática</h2>
+<p>Chegamos ao fim do caminho, e ao começo da prática. Este capítulo recolhe, em forma de roteiro, o que dissemos ao longo do livro.</p>
+<h3 id="para-fazer-as-nove-primeiras-sextas-feiras">Para fazer as nove primeiras sextas-feiras</h3>
+<ol>
+<li><strong>Escolha o mês de início</strong> e marque as nove datas no calendário. Um exemplo concreto: começando na sexta-feira, <strong>2 de outubro de 2026</strong>, as nove primeiras sextas serão 2 de outubro, 6 de novembro e 4 de dezembro de 2026, e 1º de janeiro, 5 de fevereiro, 5 de março, 2 de abril, 7 de maio e <strong>4 de junho de 2027</strong>. A nona coincidirá com a <strong>solenidade do Sagrado Coração</strong> de 2027 (a Páscoa será em 28 de março e Pentecostes em 16 de maio). Atenção a duas datas: 1º de janeiro é também a solenidade de Santa Maria, Mãe de Deus, e 2 de abril cai na Oitava da Páscoa. Nas duas há Missa, mas convém confirmar o horário na paróquia.</li>
+<li><strong>Faça a intenção uma vez, de modo explícito.</strong> Por exemplo: "Senhor Jesus, ofereço as comunhões das primeiras sextas-feiras em honra do vosso Sagrado Coração e em reparação pelas ofensas que recebeis, especialmente no Santíssimo Sacramento".</li>
+<li><strong>Confira o estado de graça.</strong> Havendo pecado grave, confesse-se antes. Não havendo, a confissão é recomendada, mas não é condição.</li>
+<li><strong>Comungue na primeira sexta-feira</strong>, normalmente na Missa. Se a sua paróquia não tiver Missa nesse dia, procure outra igreja. Reorganizar o trabalho para isso já é um bom sacrifício.</li>
+<li><strong>Se faltar um mês, recomece.</strong> Sem drama e sem escrúpulo.</li>
+<li><strong>Continue depois da nona.</strong> A devoção não termina com a "garantia": ela forma o hábito da comunhão reparadora.</li>
+<li><strong>Considere a entronização</strong> do Sagrado Coração em casa, de preferência com um sacerdote ou diácono. No dia da consagração da família há indulgência plenária.</li>
+<li><strong>Peça, sem exigir, a Missa votiva</strong>, quando a primeira sexta cair num dia ferial do Tempo Comum.</li>
+<li><strong>Faça as nove sextas por confiança</strong>, no caminho de Santa Teresinha, e não como quem compra uma garantia.</li>
+<li><strong>Evite a presunção.</strong> As nove sextas não "compram" o céu. Elas pedem e preparam a graça do arrependimento final.</li>
+</ol>
+<h3 id="roteiro-de-uma-hora-santa-de-primeira-sexta-feira">Roteiro de uma Hora Santa de primeira sexta-feira</h3>
+<p>Uma Hora Santa bem preparada costuma seguir um esquema simples, que se pode adaptar. Eis uma proposta para cerca de sessenta minutos:</p>
+<table class="long-table">
+<thead>
+<tr>
+<th>Tempo</th>
+<th>Momento</th>
+<th>Sugestão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–5 min</td>
+<td>Exposição</td>
+<td>Canto eucarístico (<em>O Salutaris</em> ou equivalente); aclamação "Ó Sacramento santíssimo, ó Sacramento divino, todo louvor e toda graça a todo momento sejam dados a vós"</td>
+</tr>
+<tr>
+<td>5–10 min</td>
+<td>Abertura</td>
+<td>Recordar o pedido de Paray ("Não fostes capazes de vigiar uma hora comigo?") e a intenção da hora</td>
+</tr>
+<tr>
+<td>10–25 min</td>
+<td>Palavra</td>
+<td>Jo 19,31-37 (o lado aberto), Jo 7,37-39 (rios de água viva), Os 11 (laços de amor) ou Mt 11,25-30; um salmo; breve meditação</td>
+</tr>
+<tr>
+<td>25–35 min</td>
+<td>Silêncio</td>
+<td>Adoração silenciosa</td>
+</tr>
+<tr>
+<td>35–45 min</td>
+<td>Reparação</td>
+<td>Ladainha do Sagrado Coração; um ato de reparação ("Nós vos consolaremos, Senhor" ou o de Pio XI)</td>
+</tr>
+<tr>
+<td>45–52 min</td>
+<td>Intercessão</td>
+<td>Preces, incluindo a intenção do Papa para o mês</td>
+</tr>
+<tr>
+<td>52–55 min</td>
+<td>Consagração</td>
+<td>Ato de consagração ao Sagrado Coração</td>
+</tr>
+<tr>
+<td>55–60 min</td>
+<td>Bênção</td>
+<td><em>Tantum ergo</em>, bênção do Santíssimo, Louvores Divinos ("Bendito seja o seu Sacratíssimo Coração"), reposição</td>
+</tr>
+</tbody>
+</table>
+<p>Algumas notas para enriquecer esse esquema:</p>
+<ul>
+<li><strong>Outras leituras</strong> que se prestam bem: Is 63–64 ("Vós sois o oleiro, nós o barro"), o Salmo 95 ("Hoje, se ouvirdes a sua voz, não endureçais o coração"), Mc 13,33-37 ("Vigiai"), Lc 15,3-7 (a ovelha perdida), Jo 17 (a oração sacerdotal) e Mt 11,28-30.</li>
+<li><strong>A oração pelas intenções do Papa</strong> é a tradição do Apostolado da Oração, fundado em 1844 pelo jesuíta François-Xavier Gautrelet e renomeado em 2016 como Rede Mundial de Oração do Papa.</li>
+<li><strong>Os mistérios dolorosos do Rosário</strong> combinam muito bem com a Hora Santa, que é, afinal, uma vigília junto do Senhor em agonia.</li>
+<li><strong>Uma Hora Santa pode ganhar o perfil de um santo.</strong> Um grupo franciscano, por exemplo, pode incluir os <em>Louvores do Deus Altíssimo</em> e a <em>Oração diante do Crucifixo</em> de São Francisco.</li>
+<li><strong>Ler o Magistério</strong> durante a adoração, mês a mês, é um costume excelente.</li>
+<li><strong>Os cantos</strong>: prefira cantos aprovados para a liturgia e a adoração, como o repertório da CNBB e hinos tradicionais como <em>Coração Santo</em>, a traduções improvisadas de hinos de autoria desconhecida.</li>
+</ul>
+<p>Com pelo menos meia hora de adoração, os participantes podem lucrar <strong>indulgência plenária</strong>, nas condições habituais. Vale a pena dizê-lo no folheto, com exatidão, sem prometer uma indulgência "da primeira sexta".</p>
+<h3 id="para-quem-conduz-cuidados-de-linguagem">Para quem conduz: cuidados de linguagem</h3>
+<p>Quem conduz um grupo tem uma responsabilidade especial: as palavras que usa formam a fé dos outros. Algumas sugestões:</p>
+<ul>
+<li>Diga <strong>"promessa"</strong> e <strong>"esperança firme"</strong>, não "garantia" ou "bilhete para o céu".</li>
+<li>Apresente as doze promessas como <strong>compilação</strong> fiel dos escritos da santa, e não como uma lista ditada de uma vez.</li>
+<li>Lembre que a devoção <strong>não depende das visões</strong>: está fundada no Evangelho do Coração transpassado.</li>
+<li>Não use números ou "provas científicas" que não foram verificados.</li>
+<li>Conclua as orações <strong>"ao Pai, por Cristo, no Espírito"</strong>. O Coração de Cristo leva ao Pai.</li>
+<li><strong>Proponha sem impor.</strong> As visões não obrigam, e o centro é o amor de Cristo.</li>
+<li>Não anuncie a "indulgência plenária das primeiras sextas". A indulgência real vem da adoração de meia hora.</li>
+<li>Ao indicar vídeos ou livretos, verifique a origem. Prefira material de paróquias, dioceses e institutos em plena comunhão com a Igreja.</li>
+</ul>
+<hr />
+<p><em>Para levar consigo.</em> Se você ainda não começou, comece na próxima primeira sexta-feira. Se já começou, persevere. Se já terminou, continue. E, em qualquer caso, reze devagar, ao menos uma vez, a súplica que atravessa este livro do princípio ao fim: "Jesus, manso e humilde de coração, fazei o nosso coração semelhante ao vosso".</p>
+<hr />
+<h2 class="apx" id="apendice-oracoes">Apêndice — Orações</h2>
+<p>Reunimos aqui, por inteiro, as orações de que falamos ao longo do livro, na ordem em que costumam aparecer numa Hora Santa de primeira sexta-feira.</p>
+<h3 id="ladainha-do-sagrado-coracao-de-jesus">Ladainha do Sagrado Coração de Jesus</h3>
+<p><em>Aprovada por Leão XIII para toda a Igreja em 1899. Suas trinta e três invocações recordam os anos da vida terrena do Redentor. Indulgência parcial.</em></p>
+<blockquote>
+<p>Senhor, tende piedade de nós. — Jesus Cristo, tende piedade de nós. — Senhor, tende piedade de nós.
+Jesus Cristo, ouvi-nos. — Jesus Cristo, atendei-nos.
+Deus Pai do céu, <strong>tende piedade de nós.</strong>
+Deus Filho, Redentor do mundo,
+Deus Espírito Santo,
+Santíssima Trindade, que sois um só Deus,</p>
+<p>Coração de Jesus, Filho do Pai eterno,
+Coração de Jesus, formado pelo Espírito Santo no seio da Virgem Mãe,
+Coração de Jesus, unido substancialmente ao Verbo de Deus,
+Coração de Jesus, de majestade infinita,
+Coração de Jesus, templo santo de Deus,
+Coração de Jesus, tabernáculo do Altíssimo,
+Coração de Jesus, casa de Deus e porta do céu,
+Coração de Jesus, fornalha ardente de caridade,
+Coração de Jesus, receptáculo de justiça e de amor,
+Coração de Jesus, cheio de bondade e de amor,
+Coração de Jesus, abismo de todas as virtudes,
+Coração de Jesus, digníssimo de todo louvor,
+Coração de Jesus, rei e centro de todos os corações,
+Coração de Jesus, no qual estão todos os tesouros da sabedoria e da ciência,
+Coração de Jesus, no qual habita toda a plenitude da divindade,
+Coração de Jesus, no qual o Pai pôs todas as suas complacências,
+Coração de Jesus, de cuja plenitude todos nós recebemos,
+Coração de Jesus, desejado das colinas eternas,
+Coração de Jesus, paciente e de muita misericórdia,
+Coração de Jesus, rico para todos os que vos invocam,
+Coração de Jesus, fonte de vida e de santidade,
+Coração de Jesus, propiciação pelos nossos pecados,
+Coração de Jesus, saturado de opróbrios,
+Coração de Jesus, triturado por causa dos nossos crimes,
+Coração de Jesus, feito obediente até a morte,
+Coração de Jesus, transpassado pela lança,
+Coração de Jesus, fonte de toda consolação,
+Coração de Jesus, nossa vida e ressurreição,
+Coração de Jesus, nossa paz e reconciliação,
+Coração de Jesus, vítima dos pecadores,
+Coração de Jesus, salvação dos que em vós esperam,
+Coração de Jesus, esperança dos que morrem em vós,
+Coração de Jesus, delícia de todos os santos, <strong>tende piedade de nós.</strong></p>
+<p>Cordeiro de Deus, que tirais o pecado do mundo, <strong>perdoai-nos, Senhor.</strong>
+Cordeiro de Deus, que tirais o pecado do mundo, <strong>ouvi-nos, Senhor.</strong>
+Cordeiro de Deus, que tirais o pecado do mundo, <strong>tende piedade de nós.</strong></p>
+<p>V. Jesus, manso e humilde de coração,
+R. <strong>Fazei o nosso coração semelhante ao vosso.</strong></p>
+<p>Oremos: Deus eterno e todo-poderoso, olhai para o Coração do vosso Filho muito amado e para os louvores e satisfações que Ele vos oferece em nome dos pecadores; e aos que imploram a vossa misericórdia concedei benigno o perdão, em nome do mesmo Jesus Cristo, vosso Filho, que convosco vive e reina na unidade do Espírito Santo, por todos os séculos dos séculos. Amém.</p>
+</blockquote>
+<p>A invocação "vítima dos pecadores" também pode ser traduzida por "vítima pelos pecados".</p>
+<h3 id="oracao-reparadora-nos-vos-consolaremos-senhor">Oração reparadora: "Nós vos consolaremos, Senhor"</h3>
+<p><em>Ato de reparação de uso devocional amplo, próprio para ser rezado em comunidade na primeira sexta-feira, diante do Santíssimo exposto.</em></p>
+<p>Divino Salvador Jesus! Dignai-vos baixar um olhar de misericórdia sobre vossos filhos, que, reunidos em um mesmo pensamento de fé, reparação e amor, vêm chorar a vossos pés suas infidelidades e as de seus irmãos, os pobres pecadores!</p>
+<p>Possamos nós, pelas promessas unânimes e solenes que vamos fazer, tocar o vosso divino Coração, e dele alcançar misericórdia para o mundo infeliz e criminoso e para todos aqueles que não têm a felicidade de vos amar!</p>
+<p>Daqui por diante, sim, todos nós vo-lo prometemos:</p>
+<blockquote>
+<p>Do esquecimento e da ingratidão dos homens, <strong>nós vos consolaremos, Senhor!</strong>
+Do abandono em que sois deixado no santo Tabernáculo,
+Dos crimes dos pecadores,
+Do ódio dos ímpios,
+Das blasfêmias que se vomitam contra vós,
+Das injúrias feitas à vossa divindade,
+Dos sacrilégios com que se profana o vosso Sacramento de amor,
+Das imodéstias e irreverências cometidas em vossa presença adorável,
+Da tibieza do maior número de vossos filhos,
+Do desprezo que se faz de vossos convites cheios de amor,
+Das infidelidades daqueles que se dizem vossos amigos,
+Do abuso de vossas graças,
+De nossas próprias infidelidades,
+Da incompreensível dureza de nossos corações,
+De nossa longa demora em vos amar,
+De nossa frouxidão em vosso santo serviço,
+Da amarga tristeza em que sois abismado pela perda das almas,
+Do vosso longo esperar às portas de nossos corações,
+Das amargas repulsas de que sois saciado,
+De vossos suspiros de amor,
+De vossas lágrimas de amor,
+De vosso cativeiro de amor,
+De vosso martírio de amor, <strong>nós vos consolaremos, Senhor!</strong></p>
+</blockquote>
+<p>Oremos: Divino Salvador Jesus, que de vosso Coração deixastes escapar esta queixa dolorosa: "Eu procurei consoladores e não os achei", dignai-vos aceitar o pequeno tributo de nossas consolações e assistir-nos tão poderosamente com o socorro de vossa graça que, para o futuro, fugindo cada vez mais de tudo o que vos poderia desagradar, nos mostremos em tudo, por toda a parte e sempre, vossos filhos, os mais fiéis e devotados. Nós vo-lo pedimos por vós mesmo, que, sendo Deus, com o Pai e o Espírito Santo, viveis e reinais nos séculos dos séculos. Amém.</p>
+<h3 id="ato-de-reparacao-ao-sagrado-coracao-de-jesus-pio-xi">Ato de Reparação ao Sagrado Coração de Jesus (Pio XI)</h3>
+<p><em>Prescrito por Pio XI em 1928 para a festa do Sagrado Coração. Indulgência parcial; plenária quando recitado publicamente na solenidade do Sagrado Coração.</em></p>
+<p>Dulcíssimo Jesus, cuja infinita caridade para com os homens é por eles tão ingratamente correspondida com esquecimentos, friezas e desprezos, eis-nos aqui prostrados na vossa presença, para vos desagravarmos, com especiais homenagens, da insensibilidade tão insensata e das nefandas injúrias com que é, de toda a parte, alvejado o vosso amorosíssimo Coração.</p>
+<p>Reconhecendo, porém, com a mais profunda dor, que também nós, mais de uma vez, cometemos as mesmas indignidades, para nós, em primeiro lugar, imploramos a vossa misericórdia, prontos a expiar não só as próprias culpas, senão também as daqueles que, errando longe do caminho da salvação, ou se obstinam na sua infidelidade, não vos querendo como pastor e guia, ou, conculcando as promessas do batismo, sacudiram o suavíssimo jugo da vossa santa lei.</p>
+<p>De todos estes tão deploráveis crimes, Senhor, queremos nós hoje desagravar-vos, mas, particularmente, da licença dos costumes e imodéstias do vestido, de tantos laços de corrupção armados à inocência, da violação dos dias santificados, das execrandas blasfêmias contra vós e vossos Santos, dos insultos ao vosso Vigário e a todo o vosso Clero, do desprezo e das horrendas e sacrílegas profanações do Sacramento do divino amor, e, enfim, dos atentados e rebeldias das nações contra os direitos e o magistério da vossa Igreja.</p>
+<p>Oh! se pudéssemos lavar, com o próprio sangue, tantas iniquidades! Entretanto, para reparar a honra divina ultrajada, vos oferecemos, juntamente com os merecimentos da Virgem Mãe, de todos os Santos e almas piedosas, aquela infinita satisfação que vós oferecestes ao Eterno Pai sobre a cruz, e que não cessais de renovar, todos os dias, sobre nossos altares.</p>
+<p>Ajudai-nos, Senhor, com o auxílio da vossa graça, para que possamos, como é nosso firme propósito, com a viveza da fé, com a pureza dos costumes, com a fiel observância da lei e caridade evangélicas, reparar todos os pecados cometidos por nós e por nosso próximo, impedir, por todos os meios, novas injúrias de vossa divina Majestade e atrair ao vosso serviço o maior número de almas possíveis.</p>
+<p>Recebei, ó benigníssimo Jesus, pelas mãos de Maria santíssima reparadora, a espontânea homenagem deste nosso desagravo, e concedei-nos a grande graça de perseverarmos constantes, até à morte, no fiel cumprimento dos nossos deveres e no vosso santo serviço, para que possamos chegar todos à pátria bem-aventurada, onde vós com o Pai e o Espírito Santo viveis e reinais, Deus, por todos os séculos dos séculos. Amém.</p>
+<h3 id="ato-de-consagracao-do-genero-humano-ao-sagrado-coracao-leao-xiii">Ato de consagração do gênero humano ao Sagrado Coração (Leão XIII)</h3>
+<p><em>Composto para a consagração de 11 de junho de 1899. Indulgência parcial; plenária quando recitado publicamente na solenidade de Jesus Cristo Rei.</em></p>
+<p>Dulcíssimo Jesus, Redentor do gênero humano, lançai sobre nós, que humildemente estamos prostrados na vossa presença, os vossos olhares. Nós somos e queremos ser vossos; e, a fim de podermos viver mais intimamente unidos a vós, cada um de nós se consagra, espontaneamente, neste dia, ao vosso sacratíssimo Coração.</p>
+<p>Muitos há que nunca vos conheceram; muitos, desprezando os vossos mandamentos, vos renegaram. Benigníssimo Jesus, tende piedade de uns e de outros e trazei-os todos ao vosso Sagrado Coração.</p>
+<p>Senhor, sede rei não somente dos fiéis, que nunca de vós se afastaram, mas também dos filhos pródigos, que vos abandonaram; fazei que estes tornem, quanto antes, à casa paterna, para não perecerem de miséria e de fome.</p>
+<p>Sede rei dos que vivem iludidos no erro, ou separados de vós pela discórdia; trazei-os ao porto da verdade e à unidade da fé, a fim de que, em breve, haja um só rebanho e um só pastor.</p>
+<p>Senhor, conservai incólume a vossa Igreja, e dai-lhe uma liberdade segura e sem peias; concedei ordem e paz a todos os povos; fazei que, de um polo a outro do mundo, ressoe uma só voz: Louvado seja o Coração divino, que nos trouxe a salvação; honra e glória a ele, por todos os séculos. Amém.</p>
+<h3 id="consagracao-ao-sagrado-coracao-santa-margarida-maria">Consagração ao Sagrado Coração (Santa Margarida Maria)</h3>
+<p><em>A fórmula clássica de consagração pessoal, muito própria para quem conclui as nove primeiras sextas-feiras.</em></p>
+<p>Eu, N., vos dou e consagro, ó Sagrado Coração de Jesus Cristo, minha pessoa e minha vida, minhas ações, penas e sofrimentos, para não querer mais servir-me de nenhuma parte de meu ser senão para vos honrar, amar e glorificar.</p>
+<p>É esta minha vontade irrevogável: ser todo vosso e tudo fazer por vosso amor, renunciando de todo o meu coração a tudo quanto vos possa desagradar.</p>
+<p>Tomo-vos, pois, ó Sagrado Coração, por único objeto de meu amor, protetor de minha vida, segurança de minha salvação, remédio de minha fragilidade e de minha inconstância, reparador de todas as imperfeições de minha vida e meu asilo seguro na hora da morte.</p>
+<p>Sede, ó Coração de bondade, minha justificação diante de Deus, vosso Pai, para que desvie de mim sua justa cólera. Ó Coração de amor! Deposito toda a minha confiança em vós, pois tudo temo de minha malícia e de minha fraqueza, mas tudo espero de vossa bondade!</p>
+<p>Extingui em mim tudo o que possa desagradar-vos ou se oponha à vossa vontade. Seja o vosso puro amor tão profundamente impresso em meu coração, que jamais possa eu esquecer-vos, nem separar-me de vós. Suplico, por vosso infinito amor, que meu nome seja escrito em vosso Coração, pois quero fazer consistir toda a minha felicidade e toda a minha glória em viver e morrer como vosso escravo. Amém.</p>
+<h3 id="novena-eficaz-ao-sagrado-coracao">Novena eficaz ao Sagrado Coração</h3>
+<p><em>São Pio de Pietrelcina a rezava todos os dias pelas intenções de quem lhe pedia orações.</em></p>
+<p>1. Ó meu Jesus, que dissestes: "Em verdade vos digo, pedi e recebereis, procurai e achareis, batei e ser-vos-á aberto!", eis que bato, procuro e peço a graça… <em>(diz-se a graça pedida)</em>
+Pai-Nosso, Ave-Maria e Glória.
+Sagrado Coração de Jesus, eu confio em vós!</p>
+<p>2. Ó meu Jesus, que dissestes: "Em verdade vos digo, qualquer coisa que peçais ao meu Pai, no meu nome, Ele vo-la concederá!", eis que ao vosso Pai, no vosso nome, eu peço a graça…
+Pai-Nosso, Ave-Maria e Glória.
+Sagrado Coração de Jesus, eu confio em vós!</p>
+<p>3. Ó meu Jesus, que dissestes: "Em verdade vos digo, passarão o céu e a terra, mas as minhas palavras, jamais!", eis que, apoiado na infalibilidade das vossas santas palavras, eu vos peço a graça…
+Pai-Nosso, Ave-Maria e Glória.
+Sagrado Coração de Jesus, eu confio em vós!</p>
+<p>Ó Sagrado Coração de Jesus, a quem uma única coisa é impossível, isto é, a de não ter compaixão dos infelizes, tende piedade de nós, míseros pecadores, e concedei-nos as graças que vos pedimos por intermédio do Coração Imaculado da vossa e nossa terna Mãe.
+São José, amigo do Sagrado Coração de Jesus, rogai por nós.
+<em>Reza-se a Salve-Rainha.</em></p>
+<p>Toda petição ao Coração de Jesus termina, no fundo, como deve terminar: "Fazei o que o vosso Coração quiser". Qualquer que seja a resposta, nunca deixaremos de vos adorar.</p>
+<h3 id="alma-de-cristo">Alma de Cristo</h3>
+<p><em>Oração do século XIV, que Santo Inácio incluiu nos seus Exercícios Espirituais. Própria para a ação de graças depois da comunhão. Indulgência parcial.</em></p>
+<blockquote>
+<p>Alma de Cristo, santificai-me.
+Corpo de Cristo, salvai-me.
+Sangue de Cristo, inebriai-me.
+Água do lado de Cristo, lavai-me.
+Paixão de Cristo, confortai-me.
+Ó bom Jesus, ouvi-me.
+Dentro de vossas chagas, escondei-me.
+Não permitais que me separe de vós.
+Do espírito maligno defendei-me.
+Na hora da morte chamai-me
+e mandai-me ir para vós,
+para que com vossos Santos vos louve
+por todos os séculos dos séculos. Amém.</p>
+</blockquote>
+<h3 id="comunhao-espiritual-santo-afonso-de-ligorio">Comunhão espiritual (Santo Afonso de Ligório)</h3>
+<p><em>Para quem não pode comungar sacramentalmente. Não substitui a comunhão sacramental pedida pela Grande Promessa. Indulgência parcial.</em></p>
+<p>Meu Jesus, eu creio que estais presente no Santíssimo Sacramento. Amo-vos sobre todas as coisas e minha alma suspira por vós. Mas, como não posso receber-vos agora no Santíssimo Sacramento, vinde, ao menos espiritualmente, ao meu coração. Abraço-me convosco como se já estivésseis comigo: uno-me convosco inteiramente. Ah! não permitais que torne a separar-me de vós! Ó Jesus, sumo bem e doce amor meu, vulnerai e inflamai o meu coração, a fim de que esteja abrasado em vosso amor para sempre. Amém.</p>
+<hr />
+<p><em>Este livro foi escrito a partir de um estudo verificado sobre a devoção ao Sagrado Coração de Jesus e as primeiras sextas-feiras.</em></p></main>
+<a class="topo" href="#sumario" aria-label="Voltar ao sumário">&#8593;</a>
+</body>
+</html>
